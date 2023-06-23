@@ -241,7 +241,7 @@
                                           </JFXButton>
                                           <JFXButton fx:id="withPrepBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="含有介词" textAlignment="CENTER">
                                              <font>
-                                                <Font size="16.0" />
+                                                <Font name="System Bold" size="16.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets left="10.0" />
@@ -255,7 +255,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="240.0" text="只有that或who(m)">
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="260.0" text="只有that或who(m)">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
