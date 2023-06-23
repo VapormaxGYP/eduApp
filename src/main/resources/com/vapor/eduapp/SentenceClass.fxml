@@ -219,7 +219,14 @@
                                     </JFXDrawer>
                                     <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #FFF8DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
                                        <children>
-                                          <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0" />
+                                          <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Pane prefHeight="89.0" prefWidth="850.0">
+                                                   <children>
+                                                      <Label layoutX="37.0" layoutY="36.0" text="Label" />
+                                                   </children>
+                                                </Pane>
+                                             </children></VBox>
                                        </children>
                                     </JFXDrawer>
                                     <HBox layoutX="187.0" layoutY="10.0" prefHeight="92.0" prefWidth="850.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
