@@ -234,7 +234,7 @@
                                           </JFXButton>
                                           <JFXButton fx:id="withPrepBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="含有介词" textAlignment="CENTER">
                                              <font>
-                                                <Font size="16.0" />
+                                                <Font name="System Bold" size="16.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets left="10.0" />
