@@ -248,7 +248,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="240.0" text="只有that或who(m)">
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="260.0" text="只有that或who(m)">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
