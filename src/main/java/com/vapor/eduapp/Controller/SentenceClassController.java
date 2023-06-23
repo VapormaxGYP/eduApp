@@ -78,6 +78,6 @@ public class SentenceClassController implements Initializable {
         adjTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
         advTabPane.setVisible(true);
-        System.out.println("advOnClick1");
+        System.out.println("advOnClick");
     }
 }
