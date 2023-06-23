@@ -16,16 +16,16 @@ import java.util.ResourceBundle;
 public class SentenceClassController implements Initializable {
 
     @FXML
-    private JFXDrawer menuDrawer;
+    private JFXDrawer menuDrawer, contentDrawer;
 
     @FXML
     private JFXHamburger menuHam1;
 
     @FXML
-    private VBox menuBox;
+    private VBox menuBox, contentVbox;
 
     @FXML
-    private JFXButton adjBtn, nonsBtn, advBtn;
+    private JFXButton adjBtn, nonsBtn, advBtn, classicStructBtn;
 
 
     @FXML
@@ -41,6 +41,9 @@ public class SentenceClassController implements Initializable {
         nonsTabPane.setVisible(false);
 
         menuDrawer.setSidePane(menuBox);
+        contentDrawer.setSidePane(contentVbox);
+        contentDrawer.close();
+
         arrowBasicTransition = new HamburgerBackArrowBasicTransition(menuHam1);
         arrowBasicTransition.setRate(-1);
 
@@ -79,5 +82,14 @@ public class SentenceClassController implements Initializable {
         nonsTabPane.setVisible(false);
         advTabPane.setVisible(true);
         System.out.println("advOnClick");
+    }
+
+    @FXML
+    public void showClassic(){
+        if(contentDrawer.isOpened()){
+            contentDrawer.close();
+        }
+        else
+            contentDrawer.open();
     }
 }

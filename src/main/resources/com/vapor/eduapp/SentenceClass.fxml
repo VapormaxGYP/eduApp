@@ -193,9 +193,38 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
                                  <children>
+                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="1000.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" style="-fx-background-color: #ADD8E6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox" prefHeight="200.0" prefWidth="100.0" />
+                                       </children></JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer1" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #C4B454;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox1" prefHeight="200.0" prefWidth="100.0" />
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer2" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #9FE2BF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox2" prefHeight="200.0" prefWidth="100.0" />
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #F88379;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox3" prefHeight="200.0" prefWidth="100.0" />
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #CCCCFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox4" prefHeight="200.0" prefWidth="100.0" />
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #FFF8DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0" />
+                                       </children>
+                                    </JFXDrawer>
                                     <HBox layoutX="187.0" layoutY="10.0" prefHeight="92.0" prefWidth="850.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <JFXButton fx:id="classicStructBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="经典结构" textAlignment="CENTER">
+                                          <JFXButton fx:id="classicStructBtn" buttonType="RAISED" onAction="#showClassic" prefHeight="60.0" prefWidth="200.0" text="经典结构" textAlignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -219,7 +248,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="220.0" text="只有that或who(m)">
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="240.0" text="只有that或who(m)">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -248,7 +277,6 @@
                                           <Insets top="15.0" />
                                        </padding>
                                     </HBox>
-                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="300.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
                                  </children></AnchorPane>
                         </content>
                       </Tab>
