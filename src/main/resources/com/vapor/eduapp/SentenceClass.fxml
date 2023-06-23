@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vapor.eduapp.Controller.SentenceClassController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="25.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="161.0" layoutY="2.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #FFE5B4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXHamburger id="ham1" fx:id="menuHam1" layoutX="13.0" layoutY="5.0" prefHeight="15.0" prefWidth="21.0" styleClass="ham" stylesheets="@../../../CSS/hover.css" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="150.0" prefHeight="375.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="menuBox" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <JFXButton fx:id="adjBtn" buttonType="RAISED" onAction="#abjOnClick" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="形容词性从句">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="nonsBtn" buttonType="RAISED" onAction="#nonsOnClick" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="名词性从句">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="advBtn" buttonType="RAISED" onAction="#advOnClick" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="副词性从句">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </JFXDrawer>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane fx:id="adjTabPane" layoutX="-150.0" layoutY="54.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab styleClass="mainIntro" text="总述">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
+                                 <children>
+                                    <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="68.0" prefWidth="616.0">
+                                             <padding>
+                                                <Insets top="20.0" />
+                                             </padding>
+                                             <children>
+                                                <Label text="定义: 即">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="定语从句" textFill="RED">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="亦称">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="关系从句" textFill="RED">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="用来修饰主句中某一">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="名词或代词" textFill="RED">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="的句子叫做">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="定语从句" textFill="RED">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                             <children>
+                                                <Label prefHeight="70.0" prefWidth="50.0" text="类型：">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton id="adjType1" fx:id="adjType1" buttonType="RAISED" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="限定性定语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Font" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton id="adjType2" fx:id="adjType2" buttonType="RAISED" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="非限定性定语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                             <children>
+                                                <Label prefHeight="70.0" prefWidth="100.0" text="两大概念：">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton id="adjType1" fx:id="adjType11" buttonType="RAISED" prefHeight="70.0" prefWidth="140.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="先行词" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Font" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton id="adjType2" fx:id="adjType21" buttonType="RAISED" prefHeight="70.0" prefWidth="140.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="引导词" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #ADD8E6; -fx-border-style: solid; -fx-border-color: #5D3FD3;" text="引导词使用规则">
+                                             <VBox.margin>
+                                                <Insets left="15.0" top="30.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab styleClass="strucAndClass" text="常见结构及分类">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
+                                 <children>
+                                    <HBox layoutX="187.0" layoutY="10.0" prefHeight="92.0" prefWidth="850.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <JFXButton fx:id="classicStructBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="经典结构" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="withPrepBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="含有介词" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="220.0" text="whose引导">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="220.0" text="只有that或who(m)">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="as引导" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="But引导">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="300.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab styleClass="Exercise" text="练习">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab styleClass="mainIntro" text="总述">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="398.0">
+                                 <children>
+                                    <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label fx:id="defination1" prefHeight="67.0" prefWidth="450.0" text="定义：形容词性从句即定语从句，亦称关系从句。用来修饰主句中某一名词或代词的句子叫定语从句" wrapText="true" />
+                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                             <children>
+                                                <Label prefHeight="70.0" prefWidth="50.0" text="Label" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="strucAndClass" text="常见结构及分类">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab styleClass="Exercise" text="练习">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <TabPane fx:id="advTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab styleClass="mainIntro" text="总述">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="398.0">
+                                 <children>
+                                    <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label fx:id="defination2" prefHeight="67.0" prefWidth="450.0" text="定义：形容词性从句即定语从句，亦称关系从句。用来修饰主句中某一名词或代词的句子叫定语从句" wrapText="true" />
+                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                             <children>
+                                                <Label prefHeight="70.0" prefWidth="50.0" text="Label" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="strucAndClass" text="常见结构及分类">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab styleClass="Exercise" text="练习">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
