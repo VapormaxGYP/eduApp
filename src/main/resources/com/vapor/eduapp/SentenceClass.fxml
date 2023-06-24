@@ -4,9 +4,12 @@
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -193,45 +196,84 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
                                  <children>
-                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="1000.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" style="-fx-background-color: #ADD8E6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="1000.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
                                        <children>
-                                          <VBox fx:id="contentVbox" prefHeight="200.0" prefWidth="100.0" />
-                                       </children></JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer1" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #C4B454;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
-                                       <children>
-                                          <VBox fx:id="contentVbox1" prefHeight="200.0" prefWidth="100.0" />
-                                       </children>
-                                    </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer2" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #9FE2BF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
-                                       <children>
-                                          <VBox fx:id="contentVbox2" prefHeight="200.0" prefWidth="100.0" />
-                                       </children>
-                                    </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #F88379;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
-                                       <children>
-                                          <VBox fx:id="contentVbox3" prefHeight="200.0" prefWidth="100.0" />
-                                       </children>
-                                    </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #CCCCFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
-                                       <children>
-                                          <VBox fx:id="contentVbox4" prefHeight="200.0" prefWidth="100.0" />
-                                       </children>
-                                    </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="1000.0" direction="BOTTOM" style="-fx-background-color: #FFF8DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
-                                       <children>
-                                          <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0">
+                                          <VBox fx:id="contentVbox" prefHeight="476.0" prefWidth="850.0">
                                              <children>
-                                                <Pane prefHeight="89.0" prefWidth="850.0">
-                                                   <children>
-                                                      <Label layoutX="37.0" layoutY="36.0" text="Label" />
-                                                   </children>
-                                                </Pane>
+                                                <ImageView fx:id="imageView" fitHeight="472.0" fitWidth="692.0" pickOnBounds="true" preserveRatio="true">
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/classic.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children></JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer1" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox1" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="imageView1" fitHeight="476.0" fitWidth="848.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/withPrep.png" />
+                                                   </image>
+                                                </ImageView>
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer2" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox2" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="imageView2" fitHeight="472.0" fitWidth="851.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/whose1.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children></VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox3" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="imageView3" fitHeight="474.0" fitWidth="851.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/thatOrWho.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children></VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox4" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="ImageView4" fitHeight="496.0" fitWidth="844.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/as.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children></VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                       <children>
+                                          <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="imageView5" fitHeight="476.0" fitWidth="839.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/but.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children></JFXDrawer>
                                     <HBox layoutX="187.0" layoutY="10.0" prefHeight="92.0" prefWidth="850.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <JFXButton fx:id="classicStructBtn" buttonType="RAISED" onAction="#showClassic" prefHeight="60.0" prefWidth="200.0" text="经典结构" textAlignment="CENTER">
+                                          <JFXButton fx:id="classicStructBtn" buttonType="RAISED" onAction="#showClassic" prefHeight="60.0" prefWidth="200.0" text="典型结构" textAlignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -239,7 +281,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton fx:id="withPrepBtn" buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="含有介词" textAlignment="CENTER">
+                                          <JFXButton fx:id="withPrepBtn" buttonType="RAISED" onAction="#clickWithPrepBtn" prefHeight="60.0" prefWidth="200.0" text="含有介词" textAlignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -247,7 +289,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="220.0" text="whose引导">
+                                          <JFXButton fx:id="whoseBtn" buttonType="RAISED" onAction="#clickWhoseBtn" prefHeight="60.0" prefWidth="220.0" text="whose引导">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -255,7 +297,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="260.0" text="只有that或who(m)">
+                                          <JFXButton fx:id="tharOrWhoBtn" buttonType="RAISED" onAction="#clickThatOrWhoBtn" prefHeight="60.0" prefWidth="260.0" text="只用that或who(m)">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -263,7 +305,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="as引导" textAlignment="CENTER">
+                                          <JFXButton fx:id="asBtn" buttonType="RAISED" onAction="#clickAsBtn" prefHeight="60.0" prefWidth="200.0" text="as引导" textAlignment="CENTER">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -271,7 +313,7 @@
                                                 <Insets left="10.0" />
                                              </HBox.margin>
                                           </JFXButton>
-                                          <JFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="200.0" text="But引导">
+                                          <JFXButton fx:id="butBtn" buttonType="RAISED" onAction="#clickButBtn" prefHeight="60.0" prefWidth="200.0" text="but引导">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
