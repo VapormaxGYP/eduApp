@@ -196,7 +196,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
                                  <children>
-                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="800.0" direction="BOTTOM" layoutX="250.0" layoutY="218.0" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="800.0" direction="BOTTOM" layoutX="250.0" layoutY="218.0" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox" prefHeight="760.0" prefWidth="1522.0">
                                              <children>
@@ -211,7 +211,7 @@
                                                       <Insets left="70.0" top="150.0" />
                                                    </VBox.margin>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <font>
@@ -243,7 +243,7 @@
                                              <children>
                                                 <ImageView fx:id="imageView1" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <VBox.margin>
-                                                      <Insets left="70.0" top="133.0" />
+                                                      <Insets left="70.0" top="80.0" />
                                                    </VBox.margin>
                                                    <viewport>
                                                       <Rectangle2D />
@@ -252,7 +252,7 @@
                                                       <Image url="@../../../Picture/adjSenPic/withPrep.png" />
                                                    </image>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox1" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <HBox.margin>
@@ -291,7 +291,7 @@
                                                       <Image url="@../../../Picture/adjSenPic/whose1.png" />
                                                    </image>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox2" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <HBox.margin>
@@ -316,7 +316,7 @@
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox3" prefHeight="200.0" prefWidth="100.0">
                                              <children>
@@ -325,7 +325,7 @@
                                                       <Image url="@../../../Picture/adjSenPic/thatOrWho.png" />
                                                    </image>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox3" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <HBox.margin>
@@ -355,7 +355,7 @@
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox4" prefHeight="200.0" prefWidth="100.0">
                                              <children>
@@ -364,7 +364,7 @@
                                                       <Image url="@../../../Picture/adjSenPic/as.png" />
                                                    </image>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox4" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <font>
@@ -387,7 +387,7 @@
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0">
                                              <children>
@@ -396,7 +396,7 @@
                                                       <Image url="@../../../Picture/adjSenPic/but.png" />
                                                    </image>
                                                 </ImageView>
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                <HBox fx:id="contentHbox5" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
                                                       <Label text="点击右侧切换页面：">
                                                          <font>

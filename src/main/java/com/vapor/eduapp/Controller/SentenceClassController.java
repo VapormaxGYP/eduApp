@@ -11,6 +11,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,6 +29,9 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5;
+
+    @FXML
+    private HBox contentHbox, contentHbox1, contentHbox2, contentHbox3, contentHbox4, contentHbox5;
 
     @FXML
     private JFXHamburger menuHam1;
@@ -88,6 +92,7 @@ public class SentenceClassController implements Initializable {
 
         for(JFXDrawer drawer : drawers){
             drawer.close();
+            drawer.setVisible(false);
         }
 
         arrowBasicTransition = new HamburgerBackArrowBasicTransition(menuHam1);
@@ -206,6 +211,7 @@ public class SentenceClassController implements Initializable {
         while(count < drawers.size()){
             if(count != index){
                 drawers.get(count).close();
+                drawers.get(count).setVisible(false);
             }
             count++;
         }
@@ -213,8 +219,10 @@ public class SentenceClassController implements Initializable {
         JFXDrawer drawer = drawers.get(index);
         if(drawer.isOpened()){
             drawer.close();
+            drawer.setVisible(false);
         }
         else{
+            drawer.setVisible(true);
             drawer.open();
         }
     }
