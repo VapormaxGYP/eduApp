@@ -3,17 +3,19 @@ package com.vapor.eduapp.Controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+import com.vapor.eduapp.MainApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import com.jfoenix.controls.JFXDrawer;
 import javafx.scene.control.TabPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class SentenceClassController implements Initializable {
@@ -34,7 +36,11 @@ public class SentenceClassController implements Initializable {
     private VBox menuBox, contentVbox, contentVbox1, contentVbox2, contentVbox3, contentVbox4, contentVbox5;
 
     @FXML
-    private JFXButton adjBtn, nonsBtn, advBtn, classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn;
+    private JFXButton adjBtn, nonsBtn, advBtn,
+            classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
+            prepPage1Btn, prepPage2Btn, prepPage3Btn,
+            whosePageBtn1, whosePageBtn2,
+            thatWhoPageBtn1,thatWhoPageBtn2;
 
     @FXML
     private TabPane adjTabPane, nonsTabPane, advTabPane;
@@ -43,8 +49,23 @@ public class SentenceClassController implements Initializable {
 
     List<JFXDrawer> drawers = new ArrayList<>();
 
+    Image prepImage1, prepImage2, prepImage3,
+            whoseImage1, whoseImage2,
+            twImage1, twImage2, twImage3;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        prepImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep.png")).toString());
+        prepImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep2.png")).toString());
+        prepImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep3.png")).toString());
+
+        whoseImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/whose1.png")).toString());
+        whoseImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/whose2.png")).toString());
+
+        twImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho.png")).toString());
+        twImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho2.png")).toString());
+        twImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho3.png")).toString());
 
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
@@ -138,6 +159,46 @@ public class SentenceClassController implements Initializable {
     public void clickButBtn(){
         setDrawer(5);
     }
+
+    @FXML
+    public void changePrepPage1(){
+        imageView1.setImage(prepImage1);
+    }
+    @FXML
+    public void changePrepPage2(){
+        imageView1.setImage(prepImage2);
+    }
+
+    @FXML
+    public void changePrepPage3(){
+        imageView1.setImage(prepImage3);
+    }
+
+    @FXML
+    public void changeWhosePage1(){
+        imageView2.setImage(whoseImage1);
+    }
+
+    @FXML
+    public void changeWhosePage2(){
+        imageView2.setImage(whoseImage2);
+    }
+
+    @FXML
+    public void changeTwPage1(){
+        imageView3.setImage(twImage1);
+    }
+
+    @FXML
+    public void changeTwPage2(){
+        imageView3.setImage(twImage2);
+    }
+
+    @FXML
+    public void changeTwPage3(){
+        imageView3.setImage(twImage3);
+    }
+
 
     public void setDrawer(int index){
         int count = 0;

@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vapor.eduapp.Controller.SentenceClassController">
+<AnchorPane prefHeight="1080.0" prefWidth="1672.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vapor.eduapp.Controller.SentenceClassController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -196,82 +196,230 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
                                  <children>
-                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="1000.0" direction="BOTTOM" layoutX="250.0" layoutY="263.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer" defaultDrawerSize="800.0" direction="BOTTOM" layoutX="250.0" layoutY="218.0" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
-                                          <VBox fx:id="contentVbox" prefHeight="476.0" prefWidth="850.0">
+                                          <VBox fx:id="contentVbox" prefHeight="760.0" prefWidth="1522.0">
                                              <children>
-                                                <ImageView fx:id="imageView" fitHeight="472.0" fitWidth="692.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageView" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <viewport>
                                                       <Rectangle2D />
                                                    </viewport>
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/classic.png" />
                                                    </image>
+                                                   <VBox.margin>
+                                                      <Insets left="70.0" top="150.0" />
+                                                   </VBox.margin>
                                                 </ImageView>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children>
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
                                           </VBox>
                                        </children></JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer1" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer1" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox1" prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fx:id="imageView1" fitHeight="476.0" fitWidth="848.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageView1" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="70.0" top="133.0" />
+                                                   </VBox.margin>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/withPrep.png" />
                                                    </image>
                                                 </ImageView>
-                                             </children></VBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="prepPage1Btn" buttonType="RAISED" onAction="#changePrepPage1" style="-fx-background-color: #808080;" text="1">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="prepPage2Btn" buttonType="RAISED" onAction="#changePrepPage2" style="-fx-background-color: #808080;" text="2">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin></JFXButton>
+                                                      <JFXButton fx:id="prepPage3Btn" buttonType="RAISED" onAction="#changePrepPage3" style="-fx-background-color: #808080;" text="3">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer2" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer2" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox2" prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fx:id="imageView2" fitHeight="472.0" fitWidth="851.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageView2" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/whose1.png" />
                                                    </image>
                                                 </ImageView>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="whosePageBtn1" buttonType="RAISED" onAction="#changeWhosePage1" style="-fx-background-color: #808080;" text="1">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="whosePageBtn2" buttonType="RAISED" onAction="#changeWhosePage2" style="-fx-background-color: #808080;" text="2">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer3" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox3" prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fx:id="imageView3" fitHeight="474.0" fitWidth="851.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageView3" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/thatOrWho.png" />
                                                    </image>
                                                 </ImageView>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="thatWhoPageBtn1" buttonType="RAISED" onAction="#changeTwPage1" style="-fx-background-color: #808080;" text="1">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="thatWhoPageBtn2" buttonType="RAISED" onAction="#changeTwPage2" style="-fx-background-color: #808080;" text="2">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="thatWhoPageBtn3" buttonType="RAISED" onAction="#changeTwPage3" style="-fx-background-color: #808080;" text="3">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer4" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox4" prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fx:id="ImageView4" fitHeight="496.0" fitWidth="844.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="ImageView4" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/as.png" />
                                                    </image>
                                                 </ImageView>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children></VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="1000.0" direction="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                    <JFXDrawer fx:id="contentDrawer5" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
                                        <children>
                                           <VBox fx:id="contentVbox5" prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fx:id="imageView5" fitHeight="476.0" fitWidth="839.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageView5" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
                                                    <image>
                                                       <Image url="@../../../Picture/adjSenPic/but.png" />
                                                    </image>
                                                 </ImageView>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children>
                                           </VBox>
                                        </children></JFXDrawer>
-                                    <HBox layoutX="187.0" layoutY="10.0" prefHeight="92.0" prefWidth="850.0" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <HBox layoutX="187.0" layoutY="10.0" prefHeight="180.0" prefWidth="1522.0" AnchorPane.bottomAnchor="844.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <JFXButton fx:id="classicStructBtn" buttonType="RAISED" onAction="#showClassic" prefHeight="60.0" prefWidth="200.0" text="典型结构" textAlignment="CENTER">
                                              <font>
