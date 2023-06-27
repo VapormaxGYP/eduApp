@@ -47,7 +47,7 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private JFXButton adjBtn, nonsBtn, advBtn,
-            adjGwAnsBtn,
+            adjGwAnsBtn, nonAnsBtn,
             adjType1, adjType2,
             guidWordBtn,
             classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
@@ -56,7 +56,7 @@ public class SentenceClassController implements Initializable {
             thatWhoPageBtn1,thatWhoPageBtn2;
 
     @FXML
-    private Label gwAns;
+    private Label gwAns, nonAns;
 
     @FXML
     private TabPane adjTabPane, nonsTabPane, advTabPane;
@@ -171,6 +171,11 @@ public class SentenceClassController implements Initializable {
     @FXML
     public void showGwAns(){
         gwAns.setText("9个");
+    }
+
+    @FXML
+    public void showNonAns(){
+        nonAns.setText("that, which, who, whose, when, where, why");
     }
 
     @FXML

@@ -256,7 +256,7 @@
                                                             <Insets left="700.0" top="5.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="13.0" />
                                                          </font>
@@ -297,16 +297,16 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="prepPage1Btn" buttonType="RAISED" onAction="#changePrepPage1" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton fx:id="prepPage1Btn" buttonType="RAISED" onAction="#changePrepPage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </JFXButton>
-                                                      <JFXButton fx:id="prepPage2Btn" buttonType="RAISED" onAction="#changePrepPage2" style="-fx-background-color: #808080;" text="2">
+                                                      <JFXButton fx:id="prepPage2Btn" buttonType="RAISED" onAction="#changePrepPage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets left="5.0" />
                                                          </HBox.margin></JFXButton>
-                                                      <JFXButton fx:id="prepPage3Btn" buttonType="RAISED" onAction="#changePrepPage3" style="-fx-background-color: #808080;" text="3">
+                                                      <JFXButton fx:id="prepPage3Btn" buttonType="RAISED" onAction="#changePrepPage3" style="-fx-background-color: #808080;" text="3" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets left="5.0" />
                                                          </HBox.margin>
@@ -336,12 +336,12 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="whosePageBtn1" buttonType="RAISED" onAction="#changeWhosePage1" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton fx:id="whosePageBtn1" buttonType="RAISED" onAction="#changeWhosePage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </JFXButton>
-                                                      <JFXButton fx:id="whosePageBtn2" buttonType="RAISED" onAction="#changeWhosePage2" style="-fx-background-color: #808080;" text="2">
+                                                      <JFXButton fx:id="whosePageBtn2" buttonType="RAISED" onAction="#changeWhosePage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets left="5.0" />
                                                          </HBox.margin>
@@ -370,17 +370,17 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="thatWhoPageBtn1" buttonType="RAISED" onAction="#changeTwPage1" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton fx:id="thatWhoPageBtn1" buttonType="RAISED" onAction="#changeTwPage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </JFXButton>
-                                                      <JFXButton fx:id="thatWhoPageBtn2" buttonType="RAISED" onAction="#changeTwPage2" style="-fx-background-color: #808080;" text="2">
+                                                      <JFXButton fx:id="thatWhoPageBtn2" buttonType="RAISED" onAction="#changeTwPage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets left="5.0" />
                                                          </HBox.margin>
                                                       </JFXButton>
-                                                      <JFXButton fx:id="thatWhoPageBtn3" buttonType="RAISED" onAction="#changeTwPage3" style="-fx-background-color: #808080;" text="3">
+                                                      <JFXButton fx:id="thatWhoPageBtn3" buttonType="RAISED" onAction="#changeTwPage3" style="-fx-background-color: #808080;" text="3" textFill="WHITE">
                                                          <HBox.margin>
                                                             <Insets left="5.0" />
                                                          </HBox.margin>
@@ -409,7 +409,7 @@
                                                             <Insets left="700.0" top="5.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="13.0" />
                                                          </font>
@@ -441,7 +441,7 @@
                                                             <Insets left="700.0" top="5.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1">
+                                                      <JFXButton buttonType="RAISED" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="13.0" />
                                                          </font>
@@ -527,14 +527,256 @@
                                  <children>
                                     <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Label fx:id="defination1" prefHeight="67.0" prefWidth="450.0" text="定义：形容词性从句即定语从句，亦称关系从句。用来修饰主句中某一名词或代词的句子叫定语从句" wrapText="true" />
-                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                          <VBox prefHeight="166.0" prefWidth="1522.0">
                                              <children>
-                                                <Label prefHeight="70.0" prefWidth="50.0" text="Label" />
+                                                <HBox prefHeight="82.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="名词性从句含义：" textFill="#00bf00">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" prefWidth="162.0" text="名词性从句是在句子中">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" prefWidth="81.0" text="起名词作用" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" prefWidth="450.0" text="的句子。名词词性从句的功能相当于名词词组，他在复合句中能">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="担任主语、宾语、表语（主语补语）、同位语、介词补足成分等" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="84.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" prefWidth="435.0" text="因此根据它在句中不同的语法功能，名词性从句又可分别称为">
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                      <Label prefHeight="40.0" prefWidth="335.0" text="主语从句、宾语从句、表语从句和同位语从句" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                   </children>
+                                                </HBox>
                                              </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
+                                          </VBox>
+                                          <VBox prefHeight="250.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="93.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="名词性从句常用关联词：" textFill="#00bf00">
+                                                         <HBox.margin>
+                                                            <Insets top="60.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="名词性从句常用关联词有">
+                                                         <HBox.margin>
+                                                            <Insets top="60.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                      <Label prefHeight="40.0" text="that（无词义），whether（是否），if（是否），what，which，who，whose，whatever，whichever，whoever，when，where，how，why，等" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="60.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="59.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label maxWidth="1521.0" prefHeight="40.0" prefWidth="1521.0" text="其中that，whether，if在从句中只起连接作用不担任成分；连接代词 what，which，who，whose，whatever，whichever，whoever等在句中既起连接作用同时又充当主、宾、表、定语等成分；连接副词" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="when，where，how，why 在句中既起连接作用又作状语。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="220.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="129.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Question：上述这些关联词中哪些可以引导定语从句呢？">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonAns" prefHeight="40.0" prefWidth="557.0" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="120.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <JFXButton fx:id="nonAnsBtn" buttonType="RAISED" onAction="#showNonAns" prefHeight="56.0" prefWidth="161.0" style="-fx-background-color: #5B5B5B;" text="查看答案" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="500.0" top="20.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="276.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="名词性从句共性：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="（1）四种从句均">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="不能用逗号与主句分开" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children></HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="（2）名词性从句一般都">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="用陈述句语序" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="45.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="试比较：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="When will he come?">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="疑问句语序" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="51.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="I don't know">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" prefWidth="151.0" text="when he will come." underline="true">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="宾语从句，陈述句语序" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                       </children></VBox>
                                  </children>
                               </AnchorPane>
                            </content>
