@@ -49,7 +49,7 @@ public class SentenceClassController implements Initializable {
     private JFXButton adjBtn, nonsBtn, advBtn,
             adjGwAnsBtn, nonAnsBtn,
             adjType1, adjType2,
-            guidWordBtn,
+            guidWordBtn, vgWordsBtn,
             classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
             prepPage1Btn, prepPage2Btn, prepPage3Btn,
             whosePageBtn1, whosePageBtn2,
@@ -68,7 +68,7 @@ public class SentenceClassController implements Initializable {
     Image prepImage1, prepImage2, prepImage3,
             whoseImage1, whoseImage2,
             twImage1, twImage2, twImage3,
-            defAdjImage, infAdjImage, guideImage;
+            defAdjImage, infAdjImage, guideImage, vgImage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -87,6 +87,7 @@ public class SentenceClassController implements Initializable {
         defAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/def.png")).toString());
         infAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/inf.png")).toString());
         guideImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/guideWords.png")).toString());
+        vgImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/vanguard.png")).toString());
 
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
@@ -169,16 +170,6 @@ public class SentenceClassController implements Initializable {
     }
 
     @FXML
-    public void showGwAns(){
-        gwAns.setText("9个");
-    }
-
-    @FXML
-    public void showNonAns(){
-        nonAns.setText("that, which, who, whose, when, where, why");
-    }
-
-    @FXML
     public void showInf(){
 
         showView.setImage(infAdjImage);
@@ -189,6 +180,28 @@ public class SentenceClassController implements Initializable {
         else{
             showDrawer.open();
         }
+    }
+
+    @FXML
+    public void showVgWords(){
+        showView.setImage(vgImage);
+
+        if(showDrawer.isOpened()){
+            showDrawer.close();
+        }
+        else{
+            showDrawer.open();
+        }
+    }
+
+    @FXML
+    public void showGwAns(){
+        gwAns.setText("9个");
+    }
+
+    @FXML
+    public void showNonAns(){
+        nonAns.setText("that, which, who, whose, when, where, why");
     }
 
     @FXML
