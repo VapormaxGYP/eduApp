@@ -7,6 +7,7 @@ import com.vapor.eduapp.MainApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import com.jfoenix.controls.JFXDrawer;
+import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -46,12 +47,16 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private JFXButton adjBtn, nonsBtn, advBtn,
+            adjGwAnsBtn,
             adjType1, adjType2,
             guidWordBtn,
             classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
             prepPage1Btn, prepPage2Btn, prepPage3Btn,
             whosePageBtn1, whosePageBtn2,
             thatWhoPageBtn1,thatWhoPageBtn2;
+
+    @FXML
+    private Label gwAns;
 
     @FXML
     private TabPane adjTabPane, nonsTabPane, advTabPane;
@@ -161,6 +166,11 @@ public class SentenceClassController implements Initializable {
         else{
             showDrawer.open();
         }
+    }
+
+    @FXML
+    public void showGwAns(){
+        gwAns.setText("9个");
     }
 
     @FXML

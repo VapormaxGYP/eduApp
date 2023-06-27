@@ -65,7 +65,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
                                  <children>
-                                    <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <HBox prefHeight="68.0" prefWidth="616.0">
                                              <padding>
@@ -187,11 +187,42 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </JFXButton>
+                                          <HBox prefHeight="224.0" prefWidth="1522.0">
+                                             <VBox.margin>
+                                                <Insets top="100.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Label prefHeight="224.0" prefWidth="369.0" text="Question：定语从句常用引导词共有几个？">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="gwAns" prefHeight="224.0" prefWidth="121.0" textFill="RED">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets left="30.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton fx:id="adjGwAnsBtn" buttonType="RAISED" onAction="#showGwAns" prefHeight="48.0" prefWidth="124.0" style="-fx-background-color: #7B7B7B;" text="查看答案" textFill="WHITE" AnchorPane.topAnchor="100.0">
+                                                   <HBox.margin>
+                                                      <Insets left="100.0" top="90.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </VBox>
-                                    <JFXDrawer fx:id="showDrawer" defaultDrawerSize="700.0" direction="RIGHT" prefHeight="1024.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="900.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <JFXDrawer fx:id="showDrawer" defaultDrawerSize="1000.0" direction="RIGHT" layoutX="822.0" prefHeight="1026.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="822.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <ImageView fx:id="showView" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" />
+                                          <ImageView fx:id="showView" fitHeight="629.0" fitWidth="936.0" pickOnBounds="true" />
                                        </children></JFXDrawer>
                                  </children></AnchorPane>
                         </content>
