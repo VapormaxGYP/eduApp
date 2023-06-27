@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +26,14 @@ public class SentenceClassController implements Initializable {
     private JFXDrawer menuDrawer;
 
     @FXML
-    private JFXDrawer contentDrawer, contentDrawer1, contentDrawer2, contentDrawer3, contentDrawer4, contentDrawer5;
+    private JFXDrawer contentDrawer, contentDrawer1,
+            contentDrawer2, contentDrawer3,
+            contentDrawer4, contentDrawer5,
+            showDrawer;
 
     @FXML
-    private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5;
+    private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5,
+                      showView;
 
     @FXML
     private HBox contentHbox, contentHbox1, contentHbox2, contentHbox3, contentHbox4, contentHbox5;
@@ -41,6 +46,8 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private JFXButton adjBtn, nonsBtn, advBtn,
+            adjType1, adjType2,
+            guidWordBtn,
             classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
             prepPage1Btn, prepPage2Btn, prepPage3Btn,
             whosePageBtn1, whosePageBtn2,
@@ -55,7 +62,8 @@ public class SentenceClassController implements Initializable {
 
     Image prepImage1, prepImage2, prepImage3,
             whoseImage1, whoseImage2,
-            twImage1, twImage2, twImage3;
+            twImage1, twImage2, twImage3,
+            defAdjImage, infAdjImage, guideImage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -71,6 +79,10 @@ public class SentenceClassController implements Initializable {
         twImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho2.png")).toString());
         twImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho3.png")).toString());
 
+        defAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/def.png")).toString());
+        infAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/inf.png")).toString());
+        guideImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/guideWords.png")).toString());
+
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
@@ -82,6 +94,9 @@ public class SentenceClassController implements Initializable {
         contentDrawer3.setSidePane(contentVbox3);
         contentDrawer4.setSidePane(contentVbox4);
         contentDrawer5.setSidePane(contentVbox5);
+
+        showDrawer.setSidePane(showView);
+        showDrawer.close();
 
         drawers.add(contentDrawer);
         drawers.add(contentDrawer1);
@@ -133,6 +148,46 @@ public class SentenceClassController implements Initializable {
         nonsTabPane.setVisible(false);
         advTabPane.setVisible(true);
         System.out.println("advOnClick");
+    }
+
+    @FXML
+    public void showDef() {
+
+        showView.setImage(defAdjImage);
+
+        if(showDrawer.isOpened()){
+            showDrawer.close();
+        }
+        else{
+            showDrawer.open();
+        }
+    }
+
+    @FXML
+    public void showInf(){
+
+        showView.setImage(infAdjImage);
+
+        if(showDrawer.isOpened()){
+            showDrawer.close();
+        }
+        else{
+            showDrawer.open();
+        }
+    }
+
+    @FXML
+    public void showGuidWord(){
+
+        showView.setImage(guideImage);
+
+        if(showDrawer.isOpened()){
+            showDrawer.close();
+        }
+        else{
+            showDrawer.open();
+        }
+
     }
 
     @FXML

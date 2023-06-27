@@ -1,6 +1,7 @@
 package com.vapor.eduapp.Controller;
 
 import com.vapor.eduapp.MainApplication;
+import com.vapor.eduapp.SentenceClassApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,14 +19,8 @@ public class MainController {
 
     @FXML
     public void enterLearn() throws IOException {
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(MainApplication.class.getResource("SentenceClass.fxml")));
-
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.setFullScreen(true);
-        stage.setTitle("三大类限定从属分句");
-        stage.show();
+        SentenceClassApplication sentenceClassApplication = new SentenceClassApplication();
+        sentenceClassApplication.showWindow();
     }
 
     @FXML
