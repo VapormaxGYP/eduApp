@@ -59,7 +59,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TabPane fx:id="adjTabPane" layoutX="-150.0" layoutY="54.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="adjTabPane" layoutX="-150.0" layoutY="54.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
                       <Tab styleClass="mainIntro" text="总述">
                         <content>
@@ -511,7 +511,7 @@
                         </Tab>
                     </tabs>
                   </TabPane>
-                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
                         <Tab styleClass="mainIntro" text="总述">
                            <content>
@@ -775,7 +775,230 @@
                         </Tab>
                         <Tab styleClass="strucAndClass" text="常见结构及分类">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="600.0">
+                                 <children>
+                                    <JFXDrawer fx:id="subjectDrawer" defaultDrawerSize="800.0" direction="BOTTOM" layoutX="250.0" layoutY="218.0" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="subjectVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <children>
+                                                <ImageView fx:id="subjectView" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                   <VBox.margin>
+                                                      <Insets left="70.0" top="150.0" />
+                                                   </VBox.margin>
+                                                   <image>
+                                                      <Image url="@../../../Picture/nonSenPic/subject1.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <HBox fx:id="subjectHbox" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <JFXButton fx:id="subjectPageBtn1" buttonType="RAISED" onAction="#changeSubjectPage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="subjectPage2Btn" buttonType="RAISED" onAction="#changeSubjectPage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin></JFXButton>
+                                                      <JFXButton fx:id="subjectPage3Btn" buttonType="RAISED" onAction="#changeSubjectPage3" style="-fx-background-color: #808080;" text="3" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin></JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="objectDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="objectVbox" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="objectView" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="70.0" top="80.0" />
+                                                   </VBox.margin>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                   <image>
+                                                      <Image url="@../../../Picture/nonSenPic/object1.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <HBox fx:id="objectHbox" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="objectPageBtn1" buttonType="RAISED" onAction="#changeObjectPage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="objectPageBtn2" buttonType="RAISED" onAction="#changeObjectPage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="objectPageBtn3" buttonType="RAISED" onAction="#changeObjectPage3" style="-fx-background-color: #808080;" text="3" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="objectPageBtn4" buttonType="RAISED" onAction="#changeObjectPage4" style="-fx-background-color: #808080;" text="4" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="objectPageBtn5" buttonType="RAISED" onAction="#changeObjectPage5" style="-fx-background-color: #808080;" text="5" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="predicativeDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="predicativeVbox" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="predicativeView" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/nonSenPic/predicative1.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <HBox fx:id="predicativeHbox" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="predicativePage1Btn" buttonType="RAISED" onAction="#changePredicativePage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="predicativePage2Btn" buttonType="RAISED" onAction="#changePredicativePage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="appositiveDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="apposiviteVbox" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="appositiveView" fitHeight="629.0" fitWidth="1029.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/nonSenPic/appositive1.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <HBox fx:id="appositiveHbox" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="点击右侧切换页面：">
+                                                         <HBox.margin>
+                                                            <Insets left="700.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXButton fx:id="appositivePage1Btn" buttonType="RAISED" onAction="#changeAppositivePage1" style="-fx-background-color: #808080;" text="1" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="appositivePage2Btn" buttonType="RAISED" onAction="#changeAppositivePage2" style="-fx-background-color: #808080;" text="2" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="appositivePage3Btn" buttonType="RAISED" onAction="#changeAppositivePage3" style="-fx-background-color: #808080;" text="3" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <HBox layoutX="187.0" layoutY="10.0" prefHeight="180.0" prefWidth="1522.0" AnchorPane.bottomAnchor="844.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <JFXButton fx:id="subjectBtn" buttonType="RAISED" onAction="#showSubject" prefHeight="60.0" prefWidth="200.0" text="主语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="objectBtn" buttonType="RAISED" onAction="#showObject" prefHeight="60.0" prefWidth="200.0" text="宾语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="predicativeBtn" buttonType="RAISED" onAction="#showPredicative" prefHeight="60.0" prefWidth="220.0" text="表语从句">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="appositiveBtn" buttonType="RAISED" onAction="#showAppositive" prefHeight="60.0" prefWidth="260.0" text="同位语从句">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
                            </content>
                         </Tab>
                         <Tab styleClass="Exercise" text="练习">
@@ -793,12 +1016,177 @@
                                  <children>
                                     <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Label fx:id="defination2" prefHeight="67.0" prefWidth="450.0" text="定义：形容词性从句即定语从句，亦称关系从句。用来修饰主句中某一名词或代词的句子叫定语从句" wrapText="true" />
-                                          <HBox prefHeight="70.0" prefWidth="450.0">
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <Label prefHeight="70.0" prefWidth="50.0" text="Label" />
+                                                <HBox prefHeight="100.0" prefWidth="200.0" />
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="含义及分类：" textFill="#00bf00">
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="副词形成从句即状语从句，按语义可分为9大类：时间状语从句，地点状语从句，原因状语从句，结果状语从句，目的状语从句，条件状语从句，让步状语从句，方式状语从句和比较状语从句">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="45.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
                                              </children>
-                                          </HBox>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="时间状语从句引导词：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="Whenever, Until, as soon as, The instant">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </VBox.margin></HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="地点状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="Where, Wherever, Where, EveryWhere">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="原因状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="As, Since, Beacause">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="结果状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="so that, that">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="目的状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="so that, in order that">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="条件状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="if, Provided(that), In case, as/so long as">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="让步状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="although, Though, even if, as">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="方式状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="as, as though, how">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="46.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="比较状语从句：" textFill="#00bf00">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="as, than">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
                                        </children>
                                     </VBox>
                                  </children>

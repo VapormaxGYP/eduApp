@@ -1,6 +1,5 @@
 package com.vapor.eduapp.Controller;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.vapor.eduapp.MainApplication;
@@ -12,7 +11,6 @@ import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
@@ -30,30 +28,19 @@ public class SentenceClassController implements Initializable {
     private JFXDrawer contentDrawer, contentDrawer1,
             contentDrawer2, contentDrawer3,
             contentDrawer4, contentDrawer5,
-            showDrawer;
+            showDrawer,
+            subjectDrawer, objectDrawer, predicativeDrawer, appositiveDrawer;
 
     @FXML
     private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5,
-                      showView;
-
-    @FXML
-    private HBox contentHbox, contentHbox1, contentHbox2, contentHbox3, contentHbox4, contentHbox5;
+                      showView, subjectView, objectView, predicativeView, appositiveView;
 
     @FXML
     private JFXHamburger menuHam1;
 
     @FXML
-    private VBox menuBox, contentVbox, contentVbox1, contentVbox2, contentVbox3, contentVbox4, contentVbox5;
-
-    @FXML
-    private JFXButton adjBtn, nonsBtn, advBtn,
-            adjGwAnsBtn, nonAnsBtn,
-            adjType1, adjType2,
-            guidWordBtn, vgWordsBtn,
-            classicStructBtn, withPrepBtn, whoseBtn, tharOrWhoBtn, asBtn, butBtn,
-            prepPage1Btn, prepPage2Btn, prepPage3Btn,
-            whosePageBtn1, whosePageBtn2,
-            thatWhoPageBtn1,thatWhoPageBtn2;
+    private VBox menuBox, contentVbox, contentVbox1, contentVbox2, contentVbox3, contentVbox4, contentVbox5,
+                 subjectVbox, objectVbox, predicativeVbox, apposiviteVbox;
 
     @FXML
     private Label gwAns, nonAns;
@@ -63,12 +50,17 @@ public class SentenceClassController implements Initializable {
 
     HamburgerBackArrowBasicTransition arrowBasicTransition;
 
-    List<JFXDrawer> drawers = new ArrayList<>();
+    List<JFXDrawer> adjDrawers = new ArrayList<>();
+    List<JFXDrawer> nonDrawers = new ArrayList<>();
 
     Image prepImage1, prepImage2, prepImage3,
             whoseImage1, whoseImage2,
             twImage1, twImage2, twImage3,
-            defAdjImage, infAdjImage, guideImage, vgImage;
+            defAdjImage, infAdjImage, guideImage, vgImage,
+            subjectImage1, subjectImage2, subjectImage3,
+            objectImage1, objectImage2, objectImage3, objectImage4, objectImage5,
+            predicativeImage1, predicativeImage2,
+            appositiveImage1, appositiveImage2, appositiveImage3;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -89,6 +81,23 @@ public class SentenceClassController implements Initializable {
         guideImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/guideWords.png")).toString());
         vgImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/vanguard.png")).toString());
 
+        subjectImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject1.png")).toString());
+        subjectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject2.png")).toString());
+        subjectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject3.png")).toString());
+
+        objectImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object1.png")).toString());
+        objectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object2.png")).toString());
+        objectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object3.png")).toString());
+        objectImage4 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object4.png")).toString());
+        objectImage5 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object5.png")).toString());
+
+        predicativeImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/predicative1.png")).toString());
+        predicativeImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/predicative2.png")).toString());
+
+        appositiveImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive1.png")).toString());
+        appositiveImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive2.png")).toString());
+        appositiveImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive3.png")).toString());
+
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
@@ -104,14 +113,24 @@ public class SentenceClassController implements Initializable {
         showDrawer.setSidePane(showView);
         showDrawer.close();
 
-        drawers.add(contentDrawer);
-        drawers.add(contentDrawer1);
-        drawers.add(contentDrawer2);
-        drawers.add(contentDrawer3);
-        drawers.add(contentDrawer4);
-        drawers.add(contentDrawer5);
+        subjectDrawer.setSidePane(subjectVbox);
+        objectDrawer.setSidePane(objectVbox);
+        predicativeDrawer.setSidePane(predicativeVbox);
+        appositiveDrawer.setSidePane(apposiviteVbox);
 
-        for(JFXDrawer drawer : drawers){
+        adjDrawers.add(contentDrawer);
+        adjDrawers.add(contentDrawer1);
+        adjDrawers.add(contentDrawer2);
+        adjDrawers.add(contentDrawer3);
+        adjDrawers.add(contentDrawer4);
+        adjDrawers.add(contentDrawer5);
+
+        nonDrawers.add(subjectDrawer);
+        nonDrawers.add(objectDrawer);
+        nonDrawers.add(predicativeDrawer);
+        nonDrawers.add(appositiveDrawer);
+
+        for(JFXDrawer drawer : adjDrawers){
             drawer.close();
             drawer.setVisible(false);
         }
@@ -220,32 +239,32 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void showClassic(){
-        setDrawer(0);
+        setDrawer(0, adjDrawers);
     }
 
     @FXML
     public void clickWithPrepBtn(){
-        setDrawer(1);
+        setDrawer(1, adjDrawers);
     }
 
     @FXML
     public void clickWhoseBtn(){
-        setDrawer(2);
+        setDrawer(2, adjDrawers);
     }
 
     @FXML
     public void clickThatOrWhoBtn(){
-        setDrawer(3);
+        setDrawer(3, adjDrawers);
     }
 
     @FXML
     public void clickAsBtn(){
-        setDrawer(4);
+        setDrawer(4, adjDrawers);
     }
 
     @FXML
     public void clickButBtn(){
-        setDrawer(5);
+        setDrawer(5, adjDrawers);
     }
 
     @FXML
@@ -287,8 +306,92 @@ public class SentenceClassController implements Initializable {
         imageView3.setImage(twImage3);
     }
 
+    @FXML
+    public void showSubject(){
+        setDrawer(0, nonDrawers);
+    }
 
-    public void setDrawer(int index){
+    @FXML
+    public void showObject(){
+        setDrawer(1, nonDrawers);
+    }
+
+    @FXML
+    public void showPredicative(){
+        setDrawer(2, nonDrawers);
+    }
+
+    @FXML
+    public void showAppositive(){
+        setDrawer(3, nonDrawers);
+    }
+
+    @FXML
+    public void changeSubjectPage1(){
+        subjectView.setImage(subjectImage1);
+    }
+
+    @FXML
+    public void changeSubjectPage2(){
+        subjectView.setImage(subjectImage2);
+    }
+
+    @FXML
+    public void changeSubjectPage3(){
+        subjectView.setImage(subjectImage3);
+    }
+
+    @FXML
+    public void changeObjectPage1(){
+        objectView.setImage(objectImage1);
+    }
+
+    @FXML
+    public void changeObjectPage2(){
+        objectView.setImage(objectImage2);
+    }
+
+    @FXML
+    public void changeObjectPage3(){
+        objectView.setImage(objectImage3);
+    }
+
+    @FXML
+    public void changeObjectPage4(){
+        objectView.setImage(objectImage4);
+    }
+
+    @FXML
+    public void changeObjectPage5(){
+        objectView.setImage(objectImage5);
+    }
+
+    @FXML
+    public void changePredicativePage1(){
+        predicativeView.setImage(predicativeImage1);
+    }
+
+    @FXML
+    public void changePredicativePage2(){
+        predicativeView.setImage(predicativeImage2);
+    }
+
+    @FXML
+    public void changeAppositivePage1(){
+        appositiveView.setImage(appositiveImage1);
+    }
+
+    @FXML
+    public void changeAppositivePage2(){
+        appositiveView.setImage(appositiveImage2);
+    }
+
+    @FXML
+    public void changeAppositivePage3(){
+        appositiveView.setImage(appositiveImage3);
+    }
+
+    public void setDrawer(int index, List<JFXDrawer> drawers){
         int count = 0;
 
         while(count < drawers.size()){
