@@ -29,7 +29,8 @@ public class SentenceClassController implements Initializable {
             contentDrawer2, contentDrawer3,
             contentDrawer4, contentDrawer5,
             showDrawer,
-            subjectDrawer, objectDrawer, predicativeDrawer, appositiveDrawer;
+            subjectDrawer, objectDrawer, predicativeDrawer, appositiveDrawer,
+            timeDrawer, posDrawer, causeDrawer, resDrawer, aimDrawer, ifDrawer, concessionDrawer, wayDrawer, compareDrawer;
 
     @FXML
     private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5,
@@ -40,10 +41,15 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private VBox menuBox, contentVbox, contentVbox1, contentVbox2, contentVbox3, contentVbox4, contentVbox5,
-                 subjectVbox, objectVbox, predicativeVbox, apposiviteVbox;
+                 subjectVbox, objectVbox, predicativeVbox, apposiviteVbox,
+                 timeVbox, posVbox, causeVbox, resVbox, aimVbox, ifVbox, concessionVbox, wayVbox, compareVbox;
 
     @FXML
-    private Label gwAns, nonAns;
+    private Label gwAns, nonAns,
+                  adjKey1, adjKey2, adjKey3, adjKey4, adjKey5, adjKey6, adjKey7, adjKey8, adjKey9, adjKey10,
+                  exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8, exp9, exp10,
+                  nonKey1, nonKey2 ,nonKey3, nonKey4, nonKey5, nonKey6, nonKey7, nonKey8, nonKey9, nonKey10,
+                  nonExp1, nonExp2, nonExp3, nonExp4, nonExp5, nonExp6, nonExp7, nonExp8, nonExp9, nonExp10;
 
     @FXML
     private TabPane adjTabPane, nonsTabPane, advTabPane;
@@ -52,6 +58,7 @@ public class SentenceClassController implements Initializable {
 
     List<JFXDrawer> adjDrawers = new ArrayList<>();
     List<JFXDrawer> nonDrawers = new ArrayList<>();
+    List<JFXDrawer> advDrawers = new ArrayList<>();
 
     Image prepImage1, prepImage2, prepImage3,
             whoseImage1, whoseImage2,
@@ -104,6 +111,17 @@ public class SentenceClassController implements Initializable {
         predicativeDrawer.setSidePane(predicativeVbox);
         appositiveDrawer.setSidePane(apposiviteVbox);
 
+        timeDrawer.setSidePane(timeVbox);
+        posDrawer.setSidePane(posVbox);
+        causeDrawer.setSidePane(causeVbox);
+        resDrawer.setSidePane(resVbox);
+        aimDrawer.setSidePane(aimVbox);
+        ifDrawer.setSidePane(ifVbox);
+        concessionDrawer.setSidePane(concessionVbox);
+        wayDrawer.setSidePane(wayVbox);
+        compareDrawer.setSidePane(compareVbox);
+
+
         adjDrawers.add(contentDrawer);
         adjDrawers.add(contentDrawer1);
         adjDrawers.add(contentDrawer2);
@@ -115,6 +133,61 @@ public class SentenceClassController implements Initializable {
         nonDrawers.add(objectDrawer);
         nonDrawers.add(predicativeDrawer);
         nonDrawers.add(appositiveDrawer);
+
+        advDrawers.add(timeDrawer);
+        advDrawers.add(posDrawer);
+        advDrawers.add(causeDrawer);
+        advDrawers.add(resDrawer);
+        advDrawers.add(aimDrawer);
+        advDrawers.add(ifDrawer);
+        advDrawers.add(concessionDrawer);
+        advDrawers.add(wayDrawer);
+        advDrawers.add(compareDrawer);
+
+        adjKey1.setVisible(false);
+        adjKey2.setVisible(false);
+        adjKey3.setVisible(false);
+        adjKey4.setVisible(false);
+        adjKey5.setVisible(false);
+        adjKey6.setVisible(false);
+        adjKey7.setVisible(false);
+        adjKey8.setVisible(false);
+        adjKey9.setVisible(false);
+        adjKey10.setVisible(false);
+
+        exp1.setVisible(false);
+        exp2.setVisible(false);
+        exp3.setVisible(false);
+        exp4.setVisible(false);
+        exp5.setVisible(false);
+        exp6.setVisible(false);
+        exp7.setVisible(false);
+        exp8.setVisible(false);
+        exp9.setVisible(false);
+        exp10.setVisible(false);
+
+        nonKey1.setVisible(false);
+        nonKey2.setVisible(false);
+        nonKey3.setVisible(false);
+        nonKey4.setVisible(false);
+        nonKey5.setVisible(false);
+        nonKey6.setVisible(false);
+        nonKey7.setVisible(false);
+        nonKey8.setVisible(false);
+        nonKey9.setVisible(false);
+        nonKey10.setVisible(false);
+
+        nonExp1.setVisible(false);
+        nonExp2.setVisible(false);
+        nonExp3.setVisible(false);
+        nonExp4.setVisible(false);
+        nonExp5.setVisible(false);
+        nonExp6.setVisible(false);
+        nonExp7.setVisible(false);
+        nonExp8.setVisible(false);
+        nonExp9.setVisible(false);
+        nonExp10.setVisible(false);
+
 
         for(JFXDrawer drawer : adjDrawers){
             drawer.close();
@@ -134,6 +207,57 @@ public class SentenceClassController implements Initializable {
             else
                 menuDrawer.open();
         });
+
+    }
+
+    @FXML
+    public void showAnsAndExp(){
+        adjKey1.setVisible(true);
+        adjKey2.setVisible(true);
+        adjKey3.setVisible(true);
+        adjKey4.setVisible(true);
+        adjKey5.setVisible(true);
+        adjKey6.setVisible(true);
+        adjKey7.setVisible(true);
+        adjKey8.setVisible(true);
+        adjKey9.setVisible(true);
+        adjKey10.setVisible(true);
+
+        exp1.setVisible(true);
+        exp2.setVisible(true);
+        exp3.setVisible(true);
+        exp4.setVisible(true);
+        exp5.setVisible(true);
+        exp6.setVisible(true);
+        exp7.setVisible(true);
+        exp8.setVisible(true);
+        exp9.setVisible(true);
+        exp10.setVisible(true);
+    }
+
+    @FXML
+    public void showAnsAndExp2(){
+        nonKey1.setVisible(true);
+        nonKey2.setVisible(true);
+        nonKey3.setVisible(true);
+        nonKey4.setVisible(true);
+        nonKey5.setVisible(true);
+        nonKey6.setVisible(true);
+        nonKey7.setVisible(true);
+        nonKey8.setVisible(true);
+        nonKey9.setVisible(true);
+        nonKey10.setVisible(true);
+
+        nonExp1.setVisible(true);
+        nonExp2.setVisible(true);
+        nonExp3.setVisible(true);
+        nonExp4.setVisible(true);
+        nonExp5.setVisible(true);
+        nonExp6.setVisible(true);
+        nonExp7.setVisible(true);
+        nonExp8.setVisible(true);
+        nonExp9.setVisible(true);
+        nonExp10.setVisible(true);
 
     }
 
@@ -320,6 +444,50 @@ public class SentenceClassController implements Initializable {
         setDrawer(3, nonDrawers);
     }
 
+    @FXML
+    public void showTime(){
+        setDrawer(0, advDrawers);
+    }
+
+    @FXML
+    public void showPos(){
+        setDrawer(1, advDrawers);
+    }
+
+    @FXML
+    public void showCause(){
+        setDrawer(2, advDrawers);
+    }
+
+    @FXML
+    public void showRes(){
+        setDrawer(3, advDrawers);
+    }
+
+    @FXML
+    public void showAim(){
+        setDrawer(4, advDrawers);
+    }
+
+    @FXML
+    public void showIf(){
+        setDrawer(5, advDrawers);
+    }
+
+    @FXML
+    public void showConcession(){
+        setDrawer(6, advDrawers);
+    }
+
+    @FXML
+    public void showWay(){
+        setDrawer(7, advDrawers);
+    }
+
+    @FXML
+    public void showCompare(){
+        setDrawer(8, advDrawers);
+    }
     @FXML
     public void changeSubjectPage1(){
         subjectView.setImage(subjectImage1);

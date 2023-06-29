@@ -3,11 +3,13 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -506,7 +508,562 @@
                       </Tab>
                         <Tab styleClass="Exercise" text="练习">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="35.0" prefWidth="1522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="1. I tried to get out of the business, _______ I found impossible." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. which">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q1" />
+                                                         </toggleGroup></JFXRadioButton>
+                                                      <JFXRadioButton text="B. what" toggleGroup="$q1">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin></JFXRadioButton>
+                                                      <JFXRadioButton text="C. when" toggleGroup="$q1">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin></JFXRadioButton>
+                                                      <JFXRadioButton text="D. that" toggleGroup="$q1">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin></JFXRadioButton>
+                                                      <Label fx:id="adjKey1" text="A" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp1" prefHeight="46.0" prefWidth="580.0" text="此题为非限制性定语从句，逗号为显著标志，which作为关系代词代替整个主句；what不是定语从句引导词；when在定语从句中作状语，与题义不符；that不能引导非限制性定语从句。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children></HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="2. China is a country _______ abounds in natural resources." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. who" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q2" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. in which" toggleGroup="$q2" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefWidth="101.0" text="C. that" toggleGroup="$q2" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. what" toggleGroup="$q2" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey2" text="C" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp2" prefHeight="46.0" prefWidth="580.0" text="此题定语从句缺主语，who指人，that指事物。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="3. _______ you can imagine, I was then in very serious trouble, being sick and penniless in a strange land." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. Just" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q3" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. As" toggleGroup="$q3" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. What" toggleGroup="$q3" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. How" toggleGroup="$q3" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey3" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp3" prefHeight="46.0" prefWidth="580.0" text="此题为as引导的非限制性定语从句，as作为关系代词代替整个主句，其引导的从句可位于主句前面、中间或后面。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="4 The residents, _______ had been damaged by the earthquake, were given help by the Red Cross." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. all their homes" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q4" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. all of whose homes" toggleGroup="$q4" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. all whose homes" toggleGroup="$q4" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. all of their homes" toggleGroup="$q4" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey4" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp4" prefHeight="46.0" prefWidth="580.0" text="此题为定语从句关系代词whose用法，定语从句中all of whose homes指all of the residents’ homes，whose表示所属关系。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="5. The two elements _______ water is made are the gases oxygen and hydrogen." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. that" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q5" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. which" toggleGroup="$q5" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. of which" toggleGroup="$q5" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. with which" toggleGroup="$q5" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey5" text="C" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp5" prefHeight="46.0" prefWidth="580.0" text="此题为定语从句“介词+which”结构，定语从句含义为water is made of the two elements，定语从句先行词是the two elements，of which指of the two elements。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="6. The audience was quite disappointed at the film since it wasn’t such a good film ____ the advertisement had promised them." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. which" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q6" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text=" B. that" toggleGroup="$q6" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. as" toggleGroup="$q6" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. what" toggleGroup="$q6" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey6" text="C" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp6" prefHeight="46.0" prefWidth="580.0" text="此题为as 引导的限制性定语从句，与其先行词such构成“such…as”结构。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="415.0" text="7. She is the only girl _______ has ever been elected the president of the union." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. who" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q7" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. whom" toggleGroup="$q7" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. that" toggleGroup="$q7" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. which" toggleGroup="$q7" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey7" text="C" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp7" prefHeight="46.0" prefWidth="580.0" text="此题定语从句先行词是“girl”，前面有the only修饰，定语从句关系代词用that。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="432.0" text="8. In spite of all _______ has been said, the tourists have been picking up leaves and cutting their names on the tree trunk." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. what" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q8" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. that" toggleGroup="$q8" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. which" toggleGroup="$q8" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. as" toggleGroup="$q8" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey8" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp8" prefHeight="46.0" prefWidth="580.0" text="此题定语从句先行词为 “all”，定语从句引导词为that。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="432.0" text="9. Newton is one of the greatest men _______ ever lived." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. he" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q9" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. that" toggleGroup="$q9" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. who" toggleGroup="$q9" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. whom" toggleGroup="$q9" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey9" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp9" prefHeight="46.0" prefWidth="580.0" text="此题定语从句先行词是 “men”，前面有形容词最高级the greatest修饰，定语从句引导词为that。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="10. Those were the soldiers _______ to save town" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. whose responsibility it was" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q10" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. in whom there was a responsibility" toggleGroup="$q10" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. whose was the responsibility" toggleGroup="$q10" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. from whom the responsibility came" toggleGroup="$q10" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="adjKey10" text="A" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="exp10" prefHeight="46.0" prefWidth="580.0" text="此题定语从句含义为the soldiers’ responsibility was to save town，关系代词whose指the soldiers，whose在定语从句中可以同it连用，it起强调作用。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXButton fx:id="adjExeBtn" buttonType="RAISED" onAction="#showAnsAndExp" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #696969;" text="查看答案和解析" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="500.0" top="20.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children></HBox>
+                                             </children>
+                                          </VBox>
+                                       </children></VBox>
+                                 </children></AnchorPane>
                            </content>
                         </Tab>
                     </tabs>
@@ -1003,7 +1560,579 @@
                         </Tab>
                         <Tab styleClass="Exercise" text="练习">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="35.0" prefWidth="1522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="1. It so happens _______ I know the old woman." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. which">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q11" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. that" toggleGroup="$q11">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. on which" toggleGroup="$q11">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. who" toggleGroup="$q11">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey1" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp1" prefHeight="46.0" prefWidth="580.0" text="此题为It + 不及物动词 + 主语从句：It happened (seemed, turned out, occurred to me, suddenly struck me, etc.) that…。It (just) (so) happens that … 意为碰巧，恰好。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="2. _______ I have is at your service." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. That" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q21" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. Whichever" toggleGroup="$q21" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefWidth="101.0" text="C. Whatever" toggleGroup="$q21" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. Which" toggleGroup="$q21" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey2" text="C" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp2" prefHeight="46.0" prefWidth="580.0" text="“Whatever I have” 是关系代词whatever引导的主语从句，原句意思为“我的东西你都可以随时使用“。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="3. Liquids are like solids_______ they have a definite volume." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. in that" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q31" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. for that" toggleGroup="$q31" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. for which" toggleGroup="$q31" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. in which" toggleGroup="$q31" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey3" text="A" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp3" prefHeight="46.0" prefWidth="580.0" text="in that…因为，在于……，介词in后面接了宾语从句，原句意思为“液体像固体一样，都有确定的容积。”" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="4. The situation today is obviously quite different from _______ it was only 50 years ago." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. what" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q41" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. when" toggleGroup="$q41" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. which" toggleGroup="$q41" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. such" toggleGroup="$q41" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey4" text="A" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp4" prefHeight="46.0" prefWidth="580.0" text="此题为连接代词what引导的主语从句。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="5. “What is that building over there?”  “_______ the school equipment is stored.”" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. There is in which" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q51" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. That’s where" toggleGroup="$q51" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefHeight="30.0" prefWidth="145.0" text="C. That’s the building which" toggleGroup="$q51" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. The building is that" toggleGroup="$q51" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey5" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp5" prefHeight="46.0" prefWidth="580.0" text="此题为连接副词where引导的表语从句。原句意思为“那幢建筑物是做什么用的？那是学校储藏器材的地方。”" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="1. _______ that there is another good harvest this year." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. It says" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q61" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. It is said" toggleGroup="$q61" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. That is" toggleGroup="$q61" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. He was told" toggleGroup="$q61" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey6" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp6" prefHeight="46.0" prefWidth="580.0" text="此题为It + be + 过去分词 + 主语从句：It is said (reported, announced, arranged, decided, expected, stressed, etc.) that…。原句意思为“据说今年还会有个好收成。”" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="415.0" text="2. The reason why the car was stopped was _______." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton prefHeight="30.0" prefWidth="181.0" text="A. because the road was slippery" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q71" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefHeight="30.0" prefWidth="161.0" text="B. that the road was slippery" toggleGroup="$q71" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefHeight="30.0" prefWidth="151.0" text="C. due to slippery road" toggleGroup="$q71" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton prefHeight="30.0" prefWidth="165.0" text="D. owing to the slippery road" toggleGroup="$q71" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey7" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp7" prefHeight="46.0" prefWidth="580.0" text="此题为The reason is that…表语从句：“The reason why the car was stopped” 是定语从句，主语中有定语从句；”was that the road was slippery“是表语从句。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="392.0" text="3. _______ is more surprising is the fact _______ all of us are correct." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton prefHeight="15.0" prefWidth="123.0" text="A. That, that" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q81" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. What, that" toggleGroup="$q81" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. Which, that" toggleGroup="$q81" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. Which, what" toggleGroup="$q81" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey8" text="B" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp8" prefHeight="46.0" prefWidth="580.0" text="此题中“What is more surprising”是连接代词what引导的主语从句，作句子主语; “the fact that all of us are correct”是同位语从句，放在be动词“is”后，作句子表语。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="4. They held the belief _______ the earth moved around the Sun." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. whether" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q91" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. that" toggleGroup="$q91" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. if" toggleGroup="$q91" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. which" toggleGroup="$q91" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey9" text="A" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp9" prefHeight="46.0" prefWidth="580.0" text="此题中“the belief that the earth moved around the Sun”是同位语从句。同位语从句 引导词that不能省略。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="80.0" prefWidth="487.0" text="5. _______ China is a socialist country is known to all of us." wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXRadioButton text="A. The" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="q101" />
+                                                         </toggleGroup>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="B. To" toggleGroup="$q101" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="C. What" toggleGroup="$q101" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton text="D. That" toggleGroup="$q101" wrapText="true">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" top="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <Label fx:id="nonKey10" text="D" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="nonExp10" prefHeight="46.0" prefWidth="580.0" text="“China is a socialist country”是句子成分完整的陈述句，放在句首做句子主语，前面应用引导词that，that引导主语从句时不能省略。" wrapText="true">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" top="20.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="80.0" prefWidth="1522.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXButton fx:id="nonExeBtn" buttonType="RAISED" onAction="#showAnsAndExp2" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #696969;" text="查看答案和解析" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="500.0" top="20.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
                            </content>
                         </Tab>
                      </tabs>
@@ -1195,7 +2324,897 @@
                         </Tab>
                         <Tab styleClass="strucAndClass" text="常见结构及分类">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXDrawer fx:id="timeDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="timeVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Whenever" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" I met with an diffiulty, he came to my help.                每当我遇到困难时，他总来帮助我">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Until" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" we know the fats, we can't do anything about it.                在我们知道真相之前，我们对此无能为力">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Everybody was assigned a job ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="as soon as" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" they left university.                每个人已离开大学就被分配了一份工作">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="The instant " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="she saw him, she knew he was her brother.                  她一看到她，就知道他是她哥哥">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children></HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="posDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="posVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Where" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" there is a will, there is a way.                有志者，事竟成">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Wherever" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he happens to be, John can make himself at home.                无论他在那里，约翰都可以使自己感到舒服自在">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Where" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" the ancients knew nothing, we know a little.                在古人一无所知的地方，我们知道一点">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Everywhere" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" they went, the visitors were warmly received.                无论他们走到那里，游客们都受到了热烈欢迎">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="causeDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="causeVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="As" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" there was no answer, I wrote again.                因为没有回复，我又写了一遍。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Since" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" the speaker can't come, we'll have to cancel the meeting.                既然发言人不能来，，我们只好取消会议了。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Beacuse" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" it was wet, he didn't go out for a walk that day.                因为下雨，那天他没有出去散步。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="resDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="resVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="He had overslept,">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" so that" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he was late for work.                         他睡过头了，所以上班迟到了。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="What have I done">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" that" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" you should be angry with me.                       我做了什么让你生我的气。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="aimDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="aimVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="The teacher must speak clearly">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" so that" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" his students can understand well.          老师必须讲清楚，这样他的学生才能听得懂。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="They climbed to the top of building">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" in order that" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" they could get a bird's eye view of the city.          他们爬到楼顶，以便能鸟瞰这座城市。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="so that 即可以引导结果状语从句，又可以引导目的状语从从句，由句义决定。" textFill="#00c979">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="ifDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="ifVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="If" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" the dam had broken in the flood last year, there would have been great loss of life and property.           如果水坝在去年的洪水中决堤，即将会有巨大的生命和财产损失。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Provide(that)" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he wins the support of the miority groups, he will be able to win the election.            如果他赢得少数群体的支持，他就能赢得选举。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="In case " textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="it rains, we won't be able to go there on foot.          万一下雨，我们就不能步行去那里了。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="You can go out, ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="as/so long as " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="you promise to be back before eleven.              你可以出去，只要你答应十一点以前回来。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="concessionDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="concessionVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="He passed the examination">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" although" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he had been prevented by illness from studying.                 虽然他因病不能学习，但是他通过了考试">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="I shouldn't have time to see him">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" even if " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he were here.                    即使他在这里，我也没时间去看他。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Rich ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" as" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" he is, Mr Johnson is by no means a happy man.                  虽然约翰先生很有钱，但他绝不是一个快乐的人。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Though " textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="he should stand alone, he will never yield..                        虽然它应该单枪匹马，但他绝不屈服。">
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="wayDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="wayVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="You must do the exercise">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" as " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="I show you.                你必须按照我展示给你的方式做练习。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Mary was behaving ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" as though " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" she hadn't grown up.                      玛丽表现的好像她还没有长大。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="I shall wear my coat ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="how" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" I like.                     我将以我喜欢的样子着装。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="compareDrawer" defaultDrawerSize="800.0" direction="BOTTOM" prefHeight="700.0" prefWidth="1524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
+                                       <children>
+                                          <VBox fx:id="compareVbox" prefHeight="760.0" prefWidth="1522.0">
+                                             <padding>
+                                                <Insets bottom="20.0" />
+                                             </padding>
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="It's not as hard ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" as " textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="I thought. (as 和...一样， 同级比较)                      这没有我想象的那么困难。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="200.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="Jim loves Lucy more ">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text="than" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label prefHeight="40.0" text=" Tom does. (than比， 不同程度比较)                       吉姆比汤姆更爱露丝。">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="40.0" text="当 “as” 作连词时，可引导时间状语从句（当……时候）， 原因状语从句（因为）， 让步状语从句（尽管）， 方式状语从句（照……的方式）和比较状语从句（和……一样）" textFill="#00c979" wrapText="true">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="40.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </JFXDrawer>
+                                    <HBox prefHeight="180.0" prefWidth="1522.0">
+                                       <children>
+                                          <JFXButton fx:id="timeBtn" buttonType="RAISED" onAction="#showTime" prefHeight="60.0" prefWidth="154.0" text="时间状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="posBtn" buttonType="RAISED" onAction="#showPos" prefHeight="60.0" prefWidth="162.0" text="地点状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="causeBtn" buttonType="RAISED" onAction="#showCause" prefHeight="60.0" prefWidth="166.0" text="原因状语从句">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resBtn" buttonType="RAISED" onAction="#showRes" prefHeight="60.0" prefWidth="167.0" text="结果状语从句">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="aimBtn" buttonType="RAISED" onAction="#showAim" prefHeight="60.0" prefWidth="158.0" text="目的状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="ifBtn" buttonType="RAISED" onAction="#showIf" prefHeight="60.0" prefWidth="146.0" text="条件状语从句">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="concessionBtn" buttonType="RAISED" onAction="#showConcession" prefHeight="60.0" prefWidth="163.0" text="让步状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="wayBtn" buttonType="RAISED" onAction="#showWay" prefHeight="60.0" prefWidth="161.0" text="方式状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="compareBtn" buttonType="RAISED" onAction="#showCompare" prefHeight="60.0" prefWidth="148.0" text="比较状语从句" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children></AnchorPane>
                            </content>
                         </Tab>
                         <Tab styleClass="Exercise" text="练习">
