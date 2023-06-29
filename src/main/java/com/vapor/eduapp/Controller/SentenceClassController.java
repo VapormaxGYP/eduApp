@@ -66,15 +66,10 @@ public class SentenceClassController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         prepImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep.png")).toString());
-        prepImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep2.png")).toString());
-        prepImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep3.png")).toString());
 
         whoseImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/whose1.png")).toString());
-        whoseImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/whose2.png")).toString());
 
         twImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho.png")).toString());
-        twImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho2.png")).toString());
-        twImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho3.png")).toString());
 
         defAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/def.png")).toString());
         infAdjImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/inf.png")).toString());
@@ -82,21 +77,12 @@ public class SentenceClassController implements Initializable {
         vgImage = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/vanguard.png")).toString());
 
         subjectImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject1.png")).toString());
-        subjectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject2.png")).toString());
-        subjectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject3.png")).toString());
 
         objectImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object1.png")).toString());
-        objectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object2.png")).toString());
-        objectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object3.png")).toString());
-        objectImage4 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object4.png")).toString());
-        objectImage5 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object5.png")).toString());
 
         predicativeImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/predicative1.png")).toString());
-        predicativeImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/predicative2.png")).toString());
 
         appositiveImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive1.png")).toString());
-        appositiveImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive2.png")).toString());
-        appositiveImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive3.png")).toString());
 
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
@@ -273,11 +259,15 @@ public class SentenceClassController implements Initializable {
     }
     @FXML
     public void changePrepPage2(){
+        prepImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep2.png")).toString());
+
         imageView1.setImage(prepImage2);
     }
 
     @FXML
     public void changePrepPage3(){
+        prepImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep3.png")).toString());
+
         imageView1.setImage(prepImage3);
     }
 
@@ -288,6 +278,8 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changeWhosePage2(){
+        whoseImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/whose2.png")).toString());
+
         imageView2.setImage(whoseImage2);
     }
 
@@ -298,11 +290,13 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changeTwPage2(){
+        twImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho2.png")).toString());
         imageView3.setImage(twImage2);
     }
 
     @FXML
     public void changeTwPage3(){
+        twImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/thatOrWho3.png")).toString());
         imageView3.setImage(twImage3);
     }
 
@@ -333,11 +327,13 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changeSubjectPage2(){
+        subjectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject2.png")).toString());
         subjectView.setImage(subjectImage2);
     }
 
     @FXML
     public void changeSubjectPage3(){
+        subjectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/subject3.png")).toString());
         subjectView.setImage(subjectImage3);
     }
 
@@ -348,21 +344,25 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changeObjectPage2(){
+        objectImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object2.png")).toString());
         objectView.setImage(objectImage2);
     }
 
     @FXML
     public void changeObjectPage3(){
+        objectImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object3.png")).toString());
         objectView.setImage(objectImage3);
     }
 
     @FXML
     public void changeObjectPage4(){
+        objectImage4 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object4.png")).toString());
         objectView.setImage(objectImage4);
     }
 
     @FXML
     public void changeObjectPage5(){
+        objectImage5 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/object5.png")).toString());
         objectView.setImage(objectImage5);
     }
 
@@ -373,6 +373,7 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changePredicativePage2(){
+        predicativeImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/predicative2.png")).toString());
         predicativeView.setImage(predicativeImage2);
     }
 
@@ -383,11 +384,13 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     public void changeAppositivePage2(){
+        appositiveImage2 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive2.png")).toString());
         appositiveView.setImage(appositiveImage2);
     }
 
     @FXML
     public void changeAppositivePage3(){
+        appositiveImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive3.png")).toString());
         appositiveView.setImage(appositiveImage3);
     }
 
