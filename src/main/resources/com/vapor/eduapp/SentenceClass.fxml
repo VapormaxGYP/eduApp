@@ -53,6 +53,11 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
+                        <JFXButton fx:id="adjBtn1" buttonType="RAISED" onAction="#abjOnClick" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="听英文歌曲学语法">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </VBox>
                </children>
@@ -61,7 +66,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TabPane fx:id="adjTabPane" layoutX="-150.0" layoutY="54.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="adjTabPane" layoutX="-150.0" layoutY="54.0" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
                       <Tab styleClass="mainIntro" text="总述">
                         <content>
@@ -91,12 +96,12 @@
                                                 </Label>
                                                 <Label text="关系从句" textFill="RED">
                                                    <font>
-                                                      <Font size="16.0" />
+                                                      <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
                                                 <Label text="用来修饰主句中某一">
                                                    <font>
-                                                      <Font name="System Bold" size="16.0" />
+                                                      <Font size="16.0" />
                                                    </font>
                                                 </Label>
                                                 <Label text="名词或代词" textFill="RED">
@@ -1108,7 +1113,7 @@
                         </Tab>
                     </tabs>
                   </TabPane>
-                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
                         <Tab styleClass="mainIntro" text="总述">
                            <content>
@@ -1116,11 +1121,11 @@
                                  <children>
                                     <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <VBox prefHeight="166.0" prefWidth="1522.0">
+                                          <VBox prefHeight="138.0" prefWidth="1522.0">
                                              <children>
                                                 <HBox prefHeight="82.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label prefHeight="40.0" text="名词性从句含义：" textFill="#00bf00">
+                                                      <Label text="名词性从句含义：" textFill="#00bf00">
                                                          <HBox.margin>
                                                             <Insets top="45.0" />
                                                          </HBox.margin>
@@ -1128,7 +1133,7 @@
                                                             <Font size="16.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label prefHeight="40.0" prefWidth="162.0" text="名词性从句是在句子中">
+                                                      <Label text="名词性从句是在句子中">
                                                          <HBox.margin>
                                                             <Insets top="45.0" />
                                                          </HBox.margin>
@@ -1136,7 +1141,7 @@
                                                             <Font size="16.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label prefHeight="40.0" prefWidth="81.0" text="起名词作用" textFill="RED">
+                                                      <Label text="起名词作用" textFill="RED">
                                                          <HBox.margin>
                                                             <Insets top="45.0" />
                                                          </HBox.margin>
@@ -1144,15 +1149,7 @@
                                                             <Font size="16.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label prefHeight="40.0" prefWidth="450.0" text="的句子。名词词性从句的功能相当于名词词组，他在复合句中能">
-                                                         <HBox.margin>
-                                                            <Insets top="45.0" />
-                                                         </HBox.margin>
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="担任主语、宾语、表语（主语补语）、同位语、介词补足成分等" textFill="RED">
+                                                      <Label text="的句子。名词词性从句的功能相当于名词词组，他在复合句中能">
                                                          <HBox.margin>
                                                             <Insets top="45.0" />
                                                          </HBox.margin>
@@ -1162,16 +1159,17 @@
                                                       </Label>
                                                    </children>
                                                 </HBox>
-                                                <HBox prefHeight="84.0" prefWidth="1522.0">
+                                                <HBox prefHeight="55.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label prefHeight="40.0" prefWidth="435.0" text="因此根据它在句中不同的语法功能，名词性从句又可分别称为">
+                                                      <Label text="担任主语、宾语、表语（主语补语）、同位语、介词补足成分等" textFill="RED">
                                                          <HBox.margin>
                                                             <Insets top="15.0" />
                                                          </HBox.margin>
                                                          <font>
                                                             <Font size="16.0" />
-                                                         </font></Label>
-                                                      <Label prefHeight="40.0" prefWidth="335.0" text="主语从句、宾语从句、表语从句和同位语从句" textFill="RED">
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="因此根据它在句中不同的语法功能，名词性从句又可分别称为">
                                                          <HBox.margin>
                                                             <Insets top="15.0" />
                                                          </HBox.margin>
@@ -1184,35 +1182,55 @@
                                           </VBox>
                                           <VBox prefHeight="250.0" prefWidth="1522.0">
                                              <children>
-                                                <HBox prefHeight="93.0" prefWidth="1522.0">
+                                                <HBox prefHeight="38.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label prefHeight="40.0" text="名词性从句常用关联词：" textFill="#00bf00">
+                                                      <Label text="主语从句、宾语从句、表语从句和同位语从句。" textFill="RED">
                                                          <HBox.margin>
-                                                            <Insets top="60.0" />
-                                                         </HBox.margin>
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="名词性从句常用关联词有">
-                                                         <HBox.margin>
-                                                            <Insets top="60.0" />
-                                                         </HBox.margin>
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font></Label>
-                                                      <Label prefHeight="40.0" text="that（无词义），whether（是否），if（是否），what，which，who，whose，whatever，whichever，whoever，when，where，how，why，等" textFill="RED">
-                                                         <HBox.margin>
-                                                            <Insets top="60.0" />
+                                                            <Insets top="15.0" />
                                                          </HBox.margin>
                                                          <font>
                                                             <Font size="16.0" />
                                                          </font></Label>
                                                    </children>
                                                 </HBox>
+                                                <HBox prefHeight="56.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label text="名词性从句常用关联词：" textFill="#00bf00">
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="名词性从句常用关联词有">
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                      <Label text="that（无词义），whether（是否），if（是否）" textFill="RED">
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font></Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="44.0" prefWidth="1522.0">
+                                                   <children>
+                                                      <Label text="what，which，who，whose，whatever，whichever，whoever，when，where，how，why，等" textFill="RED">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
                                                 <HBox prefHeight="59.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label maxWidth="1521.0" prefHeight="40.0" prefWidth="1521.0" text="其中that，whether，if在从句中只起连接作用不担任成分；连接代词 what，which，who，whose，whatever，whichever，whoever等在句中既起连接作用同时又充当主、宾、表、定语等成分；连接副词" wrapText="true">
+                                                      <Label text="其中that，whether，if在从句中只起连接作用不担任成分；连接代词 what，which，who，whose，whatever，" wrapText="true">
                                                          <HBox.margin>
                                                             <Insets top="10.0" />
                                                          </HBox.margin>
@@ -1223,10 +1241,13 @@
                                                 </HBox>
                                                 <HBox prefHeight="51.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label prefHeight="40.0" text="when，where，how，why 在句中既起连接作用又作状语。">
+                                                      <Label text="whichever，whoever等在句中既起连接作用同时又充当主、宾、表、定语等成分；连接副词when，where，how，why 在句中既起连接作用又作状语。">
                                                          <font>
                                                             <Font size="16.0" />
                                                          </font>
+                                                         <HBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </HBox.margin>
                                                       </Label>
                                                    </children>
                                                 </HBox>
@@ -1235,12 +1256,12 @@
                                              <children>
                                                 <HBox prefHeight="129.0" prefWidth="1522.0">
                                                    <children>
-                                                      <Label prefHeight="40.0" text="Question：上述这些关联词中哪些可以引导定语从句呢？">
+                                                      <Label text="Question：上述这些关联词中哪些可以引导定语从句呢？">
                                                          <HBox.margin>
                                                             <Insets top="30.0" />
                                                          </HBox.margin>
                                                          <font>
-                                                            <Font size="16.0" />
+                                                            <Font name="System Bold" size="16.0" />
                                                          </font>
                                                       </Label>
                                                       <Label fx:id="nonAns" prefHeight="40.0" prefWidth="557.0" textFill="RED">
@@ -1287,7 +1308,7 @@
                                                             <Font size="16.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label prefHeight="40.0" text="不能用逗号与主句分开" textFill="RED">
+                                                      <Label prefHeight="40.0" text="不能用逗号与主句分开。" textFill="RED">
                                                          <HBox.margin>
                                                             <Insets top="10.0" />
                                                          </HBox.margin>
@@ -1303,7 +1324,7 @@
                                                             <Font size="16.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label prefHeight="40.0" text="用陈述句语序" textFill="RED">
+                                                      <Label prefHeight="40.0" text="用陈述句语序。" textFill="RED">
                                                          <font>
                                                             <Font size="16.0" />
                                                          </font>
@@ -2216,189 +2237,6 @@
                   </TabPane>
                   <TabPane fx:id="advTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
-                        <Tab styleClass="mainIntro" text="总述">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="398.0">
-                                 <children>
-                                    <VBox layoutX="8.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
-                                             <children>
-                                                <HBox prefHeight="100.0" prefWidth="200.0" />
-                                                <HBox prefHeight="100.0" prefWidth="200.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="含义及分类：" textFill="#00bf00">
-                                                         <HBox.margin>
-                                                            <Insets top="45.0" />
-                                                         </HBox.margin>
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="副词形成从句即状语从句，按语义可分为9大类：时间状语从句，地点状语从句，原因状语从句，结果状语从句，目的状语从句，条件状语从句，让步状语从句，方式状语从句和比较状语从句">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                         <HBox.margin>
-                                                            <Insets top="45.0" />
-                                                         </HBox.margin>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
-                                             <children>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="时间状语从句引导词：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="Whenever, Until, as soon as, The instant">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                   <VBox.margin>
-                                                      <Insets top="30.0" />
-                                                   </VBox.margin></HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="地点状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="Where, Wherever, Where, EveryWhere">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="原因状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="As, Since, Beacause">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
-                                             <children>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="结果状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="so that, that">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                   <VBox.margin>
-                                                      <Insets top="30.0" />
-                                                   </VBox.margin>
-                                                </HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="目的状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="so that, in order that">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="条件状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="if, Provided(that), In case, as/so long as">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
-                                             <children>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="让步状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="although, Though, even if, as">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                   <VBox.margin>
-                                                      <Insets top="30.0" />
-                                                   </VBox.margin>
-                                                </HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="方式状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="as, as though, how">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                                <HBox prefHeight="46.0" prefWidth="1522.0">
-                                                   <children>
-                                                      <Label prefHeight="40.0" text="比较状语从句：" textFill="#00bf00">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label prefHeight="40.0" text="as, than">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
                         <Tab styleClass="strucAndClass" text="常见结构及分类">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -3221,86 +3059,92 @@
                                           </VBox>
                                        </children>
                                     </JFXDrawer>
-                                    <HBox prefHeight="180.0" prefWidth="1522.0">
+                                    <VBox prefHeight="180.0" prefWidth="1522.0" AnchorPane.bottomAnchor="846.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <JFXButton fx:id="timeBtn" buttonType="RAISED" onAction="#showTime" prefHeight="60.0" prefWidth="154.0" text="时间状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="posBtn" buttonType="RAISED" onAction="#showPos" prefHeight="60.0" prefWidth="162.0" text="地点状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="causeBtn" buttonType="RAISED" onAction="#showCause" prefHeight="60.0" prefWidth="166.0" text="原因状语从句">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="resBtn" buttonType="RAISED" onAction="#showRes" prefHeight="60.0" prefWidth="167.0" text="结果状语从句">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="aimBtn" buttonType="RAISED" onAction="#showAim" prefHeight="60.0" prefWidth="158.0" text="目的状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="ifBtn" buttonType="RAISED" onAction="#showIf" prefHeight="60.0" prefWidth="146.0" text="条件状语从句">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="10.0" right="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                          <JFXButton fx:id="concessionBtn" buttonType="RAISED" onAction="#showConcession" prefHeight="60.0" prefWidth="163.0" text="让步状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                          </JFXButton>
-                                          <JFXButton fx:id="wayBtn" buttonType="RAISED" onAction="#showWay" prefHeight="60.0" prefWidth="161.0" text="方式状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                          </JFXButton>
-                                          <JFXButton fx:id="compareBtn" buttonType="RAISED" onAction="#showCompare" prefHeight="60.0" prefWidth="148.0" text="比较状语从句" textAlignment="CENTER">
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                          </JFXButton>
-                                       </children>
-                                       <padding>
-                                          <Insets top="15.0" />
-                                       </padding>
-                                    </HBox>
+                                          <HBox prefHeight="77.0" prefWidth="1522.0">
+                                             <children>
+                                                <JFXButton fx:id="timeBtn" buttonType="RAISED" onAction="#showTime" prefHeight="60.0" prefWidth="154.0" text="时间状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="posBtn" buttonType="RAISED" onAction="#showPos" prefHeight="60.0" prefWidth="162.0" text="地点状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="causeBtn" buttonType="RAISED" onAction="#showCause" prefHeight="60.0" prefWidth="166.0" text="原因状语从句">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="resBtn" buttonType="RAISED" onAction="#showRes" prefHeight="60.0" prefWidth="167.0" text="结果状语从句">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets top="15.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="1522.0">
+                                             <children>
+                                                <JFXButton fx:id="aimBtn" buttonType="RAISED" onAction="#showAim" prefHeight="60.0" prefWidth="158.0" text="目的状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="ifBtn" buttonType="RAISED" onAction="#showIf" prefHeight="60.0" prefWidth="146.0" text="条件状语从句">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="concessionBtn" buttonType="RAISED" onAction="#showConcession" prefHeight="60.0" prefWidth="163.0" text="让步状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="wayBtn" buttonType="RAISED" onAction="#showWay" prefHeight="60.0" prefWidth="161.0" text="方式状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="compareBtn" buttonType="RAISED" onAction="#showCompare" prefHeight="60.0" prefWidth="148.0" text="比较状语从句" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children></VBox>
                                  </children></AnchorPane>
-                           </content>
-                        </Tab>
-                        <Tab styleClass="Exercise" text="练习">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                            </content>
                         </Tab>
                      </tabs>
                   </TabPane>
+                  <Label prefHeight="448.0" prefWidth="1522.0" text="点击左上角开始学习！" visible="false" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
                </children>
             </AnchorPane>
          </center>
