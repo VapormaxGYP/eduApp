@@ -11,8 +11,15 @@ import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.util.Duration;
 
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +41,8 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5,
-                      showView, subjectView, objectView, predicativeView, appositiveView;
+                      showView, subjectView, objectView, predicativeView, appositiveView,
+                      askImageView;
 
     @FXML
     private JFXHamburger menuHam1;
@@ -45,7 +53,7 @@ public class SentenceClassController implements Initializable {
                  timeVbox, posVbox, causeVbox, resVbox, aimVbox, ifVbox, concessionVbox, wayVbox, compareVbox;
 
     @FXML
-    private Label gwAns, nonAns,
+    private Label gwAns, nonAns, guideLabel,
                   adjKey1, adjKey2, adjKey3, adjKey4, adjKey5, adjKey6, adjKey7, adjKey8, adjKey9, adjKey10,
                   exp1, exp2, exp3, exp4, exp5, exp6, exp7, exp8, exp9, exp10,
                   nonKey1, nonKey2 ,nonKey3, nonKey4, nonKey5, nonKey6, nonKey7, nonKey8, nonKey9, nonKey10,
@@ -53,6 +61,12 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private TabPane adjTabPane, nonsTabPane, advTabPane;
+
+    @FXML
+    private AnchorPane videoPane;
+
+    @FXML
+    private MediaView videoView;
 
     HamburgerBackArrowBasicTransition arrowBasicTransition;
 
@@ -69,8 +83,22 @@ public class SentenceClassController implements Initializable {
             predicativeImage1, predicativeImage2,
             appositiveImage1, appositiveImage2, appositiveImage3;
 
+    Media video;
+
+    MediaPlayer mediaPlayer;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        try {
+            video = new Media(Objects.requireNonNull(MainApplication.class.getResource("/Picture/LearnVideo.mp4")).toURI().toString());
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+
+        mediaPlayer = new MediaPlayer(video);
 
         prepImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/adjSenPic/withPrep.png")).toString());
 
@@ -91,9 +119,14 @@ public class SentenceClassController implements Initializable {
 
         appositiveImage1 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive1.png")).toString());
 
+
+        videoView.setMediaPlayer(mediaPlayer);
+
+        guideLabel.setVisible(true);
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
+        videoPane.setVisible(false);
 
         menuDrawer.setSidePane(menuBox);
         contentDrawer.setSidePane(contentVbox);
@@ -200,6 +233,8 @@ public class SentenceClassController implements Initializable {
         menuHam1.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) ->{
             arrowBasicTransition.setRate(arrowBasicTransition.getRate() *-1);
             arrowBasicTransition.play();
+            guideLabel.setVisible(false);
+            askImageView.setVisible(false);
 
             if(menuDrawer.isOpened()){
                 menuDrawer.close();
@@ -266,15 +301,17 @@ public class SentenceClassController implements Initializable {
         adjTabPane.setVisible(true);
         advTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
-        System.out.println("adjBtn click");
+        videoPane.setVisible(false);
+        guideLabel.setVisible(false);
     }
 
     @FXML
     public void nonsOnClick(){
         adjTabPane.setVisible(false);
         advTabPane.setVisible(false);
+        videoPane.setVisible(false);
         nonsTabPane.setVisible(true);
-        System.out.println("nonsOnClick");
+        guideLabel.setVisible(false);
     }
 
     @FXML
@@ -282,7 +319,16 @@ public class SentenceClassController implements Initializable {
         adjTabPane.setVisible(false);
         nonsTabPane.setVisible(false);
         advTabPane.setVisible(true);
-        System.out.println("advOnClick");
+        videoPane.setVisible(false);
+        guideLabel.setVisible(false);
+    }
+
+    @FXML
+    public void showMusicPlay(){
+        adjTabPane.setVisible(false);
+        nonsTabPane.setVisible(false);
+        advTabPane.setVisible(false);
+        videoPane.setVisible(true);
     }
 
     @FXML
@@ -561,6 +607,27 @@ public class SentenceClassController implements Initializable {
         appositiveImage3 = new Image(Objects.requireNonNull(MainApplication.class.getResource("/Picture/nonSenPic/appositive3.png")).toString());
         appositiveView.setImage(appositiveImage3);
     }
+
+    @FXML
+    public void startVideo(){
+        mediaPlayer.play();
+    }
+
+    @FXML
+    public void stopVideo(){
+        mediaPlayer.pause();
+    }
+
+    @FXML
+    public void resetVideo(){
+        mediaPlayer.seek(Duration.ZERO);
+    }
+
+    @FXML
+    public void closeWindow(){
+        System.exit(0);
+    }
+
 
     public void setDrawer(int index, List<JFXDrawer> drawers){
         int count = 0;

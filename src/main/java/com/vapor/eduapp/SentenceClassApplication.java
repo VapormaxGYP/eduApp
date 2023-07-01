@@ -18,7 +18,7 @@ public class SentenceClassApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SentenceClassApplication.class.getResource("SentenceClass.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("三种从句");
+        stage.setTitle("限定从属分句");
         stage.setScene(scene);
         stage.setFullScreen(true);
         stage.show();

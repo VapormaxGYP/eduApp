@@ -17,6 +17,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1672.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vapor.eduapp.Controller.SentenceClassController">
@@ -53,7 +54,12 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="adjBtn1" buttonType="RAISED" onAction="#abjOnClick" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="听英文歌曲学语法">
+                        <JFXButton fx:id="musicPlay" buttonType="RAISED" onAction="#showMusicPlay" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="听英文歌曲学语法">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="closeWinBtn" buttonType="RAISED" onAction="#closeWindow" prefHeight="125.0" prefWidth="150.0" ripplerFill="#ccccff" text="退出学习">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -106,7 +112,7 @@
                                                 </Label>
                                                 <Label text="名词或代词" textFill="RED">
                                                    <font>
-                                                      <Font size="16.0" />
+                                                      <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
                                                 <Label text="的句子叫做">
@@ -128,15 +134,15 @@
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
                                                 </Label>
-                                                <JFXButton id="adjType1" fx:id="adjType1" buttonType="RAISED" onAction="#showDef" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="限定性定语从句" textAlignment="CENTER">
+                                                <JFXButton id="adjType1" fx:id="adjType1" buttonType="RAISED" onAction="#showDef" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="限制性定语从句" textAlignment="CENTER">
                                                    <font>
-                                                      <Font name="System Font" size="16.0" />
+                                                      <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <HBox.margin>
                                                       <Insets left="10.0" right="10.0" />
                                                    </HBox.margin>
                                                 </JFXButton>
-                                                <JFXButton id="adjType2" fx:id="adjType2" buttonType="RAISED" onAction="#showInf" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="非限定性定语从句" textAlignment="CENTER">
+                                                <JFXButton id="adjType2" fx:id="adjType2" buttonType="RAISED" onAction="#showInf" prefHeight="70.0" prefWidth="180.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="非限制性定语从句" textAlignment="CENTER">
                                                    <font>
                                                       <Font name="System Bold" size="16.0" />
                                                    </font>
@@ -161,7 +167,7 @@
                                                 </Label>
                                                 <JFXButton id="adjType1" fx:id="vgWordsBtn" buttonType="RAISED" onAction="#showVgWords" prefHeight="70.0" prefWidth="311.0" ripplerFill="#5d3fd3" styleClass="adjType" stylesheets="@../../../CSS/hover.css" text="先行词和引导词" textAlignment="CENTER">
                                                    <font>
-                                                      <Font name="System Font" size="16.0" />
+                                                      <Font name="System Bold" size="16.0" />
                                                    </font>
                                                    <HBox.margin>
                                                       <Insets right="10.0" />
@@ -1113,7 +1119,7 @@
                         </Tab>
                     </tabs>
                   </TabPane>
-                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="nonsTabPane" prefHeight="375.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
                         <Tab styleClass="mainIntro" text="总述">
                            <content>
@@ -1924,7 +1930,7 @@
                                              <children>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label prefHeight="80.0" prefWidth="350.0" text="1. _______ that there is another good harvest this year." wrapText="true">
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="6. _______ that there is another good harvest this year." wrapText="true">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -1983,7 +1989,7 @@
                                              <children>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label prefHeight="80.0" prefWidth="350.0" text="2. The reason why the car was stopped was _______." wrapText="true">
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="7. The reason why the car was stopped was _______." wrapText="true">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -2042,7 +2048,7 @@
                                              <children>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label prefHeight="80.0" prefWidth="350.0" text="3. _______ is more surprising is the fact _______ all of us are correct." wrapText="true">
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="8. _______ is more surprising is the fact _______ all of us are correct." wrapText="true">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -2100,7 +2106,7 @@
                                              <children>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label prefHeight="80.0" prefWidth="350.0" text="4. They held the belief _______ the earth moved around the Sun." wrapText="true">
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="9. They held the belief _______ the earth moved around the Sun." wrapText="true">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -2158,7 +2164,7 @@
                                              <children>
                                                 <HBox prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label prefHeight="80.0" prefWidth="350.0" text="5. _______ China is a socialist country is known to all of us." wrapText="true">
+                                                      <Label prefHeight="80.0" prefWidth="350.0" text="10. _______ China is a socialist country is known to all of us." wrapText="true">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -3141,10 +3147,55 @@
                         </Tab>
                      </tabs>
                   </TabPane>
-                  <Label prefHeight="448.0" prefWidth="1522.0" text="点击左上角开始学习！" visible="false" AnchorPane.leftAnchor="0.0">
+                  <ImageView fx:id="askImageView" fitHeight="451.0" fitWidth="569.0" layoutX="177.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="177.0">
+                     <image>
+                        <Image url="@../../../Picture/adjSenPic/ask.png" />
+                     </image></ImageView>
+                  <Label fx:id="guideLabel" prefHeight="448.0" prefWidth="1522.0" text="点击左上角开始学习！" AnchorPane.leftAnchor="0.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font></Label>
+                  <AnchorPane fx:id="videoPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <MediaView fx:id="videoView" fitHeight="600.0" fitWidth="1000.0" preserveRatio="false">
+                                 <VBox.margin>
+                                    <Insets left="300.0" />
+                                 </VBox.margin></MediaView>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onAction="#startVideo" style="-fx-background-color: #FF7F50;" text="play" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="500.0" top="40.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></JFXButton>
+                                    <JFXButton buttonType="RAISED" onAction="#stopVideo" style="-fx-background-color: #FF7F50;" text="pause" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="100.0" top="40.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></JFXButton>
+                                    <JFXButton onAction="#resetVideo" style="-fx-background-color: #FF7F50;" text="reset" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="100.0" top="40.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </center>
