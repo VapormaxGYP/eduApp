@@ -227,6 +227,9 @@ public class SentenceClassController implements Initializable {
             drawer.setVisible(false);
         }
 
+        guideLabel.setVisible(true);
+        askImageView.setVisible(true);
+
         arrowBasicTransition = new HamburgerBackArrowBasicTransition(menuHam1);
         arrowBasicTransition.setRate(-1);
 
