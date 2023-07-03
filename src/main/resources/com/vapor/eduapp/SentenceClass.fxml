@@ -225,9 +225,20 @@
                                           </HBox>
                                        </children>
                                     </VBox>
-                                    <JFXDrawer fx:id="showDrawer" defaultDrawerSize="1000.0" direction="RIGHT" layoutX="822.0" prefHeight="1026.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="822.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <JFXDrawer fx:id="showDrawer" defaultDrawerSize="1200.0" direction="RIGHT" prefHeight="1026.0" prefWidth="1002.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <ImageView fx:id="showView" fitHeight="629.0" fitWidth="936.0" pickOnBounds="true" />
+                                          <VBox fx:id="showVbox" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="showView" fitHeight="500.0" fitWidth="700.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@../../../Picture/adjSenPic/def.png" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="50.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
                                        </children></JFXDrawer>
                                  </children></AnchorPane>
                         </content>
@@ -535,7 +546,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. which">
                                                                <HBox.margin>
@@ -544,21 +555,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q1" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. what" toggleGroup="$q1">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. when" toggleGroup="$q1">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. that" toggleGroup="$q1">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -572,7 +595,7 @@
                                                       </Label>
                                                       <Label fx:id="exp1" prefHeight="80.0" prefWidth="450.0" text="此题为非限制性定语从句，逗号为显著标志，which作为关系代词代替整个主句；what不是定语从句引导词；when在定语从句中作状语，与题义不符；that不能引导非限制性定语从句。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -592,7 +615,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. who" wrapText="true">
                                                                <HBox.margin>
@@ -601,21 +624,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q2" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. in which" toggleGroup="$q2" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="101.0" text="C. that" toggleGroup="$q2" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. what" toggleGroup="$q2" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -629,7 +664,7 @@
                                                       </Label>
                                                       <Label fx:id="exp2" prefHeight="80.0" prefWidth="450.0" text="此题定语从句缺主语，who指人，that指事物。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -650,7 +685,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. Just" wrapText="true">
                                                                <HBox.margin>
@@ -659,21 +694,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q3" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. As" toggleGroup="$q3" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. What" toggleGroup="$q3" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. How" toggleGroup="$q3" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="adjKey3" text="B" textFill="RED">
@@ -686,7 +733,7 @@
                                                       </Label>
                                                       <Label fx:id="exp3" prefHeight="80.0" prefWidth="450.0" text="此题为as引导的非限制性定语从句，as作为关系代词代替整个主句，其引导的从句可位于主句前面、中间或后面。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -707,7 +754,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. all their homes" wrapText="true">
                                                                <HBox.margin>
@@ -716,21 +763,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q4" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. all of whose homes" toggleGroup="$q4" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. all whose homes" toggleGroup="$q4" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. all of their homes" toggleGroup="$q4" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -744,7 +803,7 @@
                                                       </Label>
                                                       <Label fx:id="exp4" prefHeight="80.0" prefWidth="450.0" text="此题为定语从句关系代词whose用法，定语从句中all of whose homes指all of the residents’ homes，whose表示所属关系。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -765,7 +824,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. that" wrapText="true">
                                                                <HBox.margin>
@@ -774,21 +833,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q5" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. which" toggleGroup="$q5" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. of which" toggleGroup="$q5" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. with which" toggleGroup="$q5" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="adjKey5" text="C" textFill="RED">
@@ -801,7 +872,7 @@
                                                       </Label>
                                                       <Label fx:id="exp5" prefHeight="80.0" prefWidth="450.0" text="此题为定语从句“介词+which”结构，定语从句含义为water is made of the two elements，定语从句先行词是the two elements，of which指of the two elements。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -822,7 +893,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. which" wrapText="true">
                                                                <HBox.margin>
@@ -831,21 +902,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q6" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text=" B. that" toggleGroup="$q6" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. as" toggleGroup="$q6" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. what" toggleGroup="$q6" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -859,7 +942,7 @@
                                                       </Label>
                                                       <Label fx:id="exp6" prefHeight="80.0" prefWidth="450.0" text="此题为as 引导的限制性定语从句，与其先行词such构成“such…as”结构。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -880,7 +963,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. who" wrapText="true">
                                                                <HBox.margin>
@@ -889,21 +972,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q7" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. whom" toggleGroup="$q7" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. that" toggleGroup="$q7" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. which" toggleGroup="$q7" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="adjKey7" text="C" textFill="RED">
@@ -916,7 +1011,7 @@
                                                       </Label>
                                                       <Label fx:id="exp7" prefHeight="80.0" prefWidth="450.0" text="此题定语从句先行词是“girl”，前面有the only修饰，定语从句关系代词用that。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -937,7 +1032,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. what" wrapText="true">
                                                                <HBox.margin>
@@ -946,21 +1041,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q8" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. that" toggleGroup="$q8" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. which" toggleGroup="$q8" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. as" toggleGroup="$q8" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -974,7 +1081,7 @@
                                                       </Label>
                                                       <Label fx:id="exp8" prefHeight="80.0" prefWidth="450.0" text="此题定语从句先行词为 “all”，定语从句引导词为that。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -995,7 +1102,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. he" wrapText="true">
                                                                <HBox.margin>
@@ -1004,21 +1111,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q9" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. that" toggleGroup="$q9" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. who" toggleGroup="$q9" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. whom" toggleGroup="$q9" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="adjKey9" text="B" textFill="RED">
@@ -1031,7 +1150,7 @@
                                                       </Label>
                                                       <Label fx:id="exp9" prefHeight="80.0" prefWidth="450.0" text="此题定语从句先行词是 “men”，前面有形容词最高级the greatest修饰，定语从句引导词为that。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1052,7 +1171,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. whose responsibility it was" wrapText="true">
                                                                <HBox.margin>
@@ -1061,21 +1180,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q10" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. in whom there was a responsibility" toggleGroup="$q10" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. whose was the responsibility" toggleGroup="$q10" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. from whom the responsibility came" toggleGroup="$q10" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1089,7 +1220,7 @@
                                                       </Label>
                                                       <Label fx:id="exp10" prefHeight="80.0" prefWidth="450.0" text="此题定语从句含义为the soldiers’ responsibility was to save town，关系代词whose指the soldiers，whose在定语从句中可以同it连用，it起强调作用。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1643,7 +1774,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. which">
                                                                <HBox.margin>
@@ -1652,21 +1783,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q11" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. that" toggleGroup="$q11">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. on which" toggleGroup="$q11">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. who" toggleGroup="$q11">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1680,7 +1823,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp1" prefHeight="80.0" prefWidth="450.0" text="此题为It + 不及物动词 + 主语从句：It happened (seemed, turned out, occurred to me, suddenly struck me, etc.) that…。It (just) (so) happens that … 意为碰巧，恰好。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1702,7 +1845,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. That" wrapText="true">
                                                                <HBox.margin>
@@ -1711,21 +1854,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q21" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. Whichever" toggleGroup="$q21" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="101.0" text="C. Whatever" toggleGroup="$q21" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. Which" toggleGroup="$q21" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1739,7 +1894,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp2" prefHeight="80.0" prefWidth="450.0" text="“Whatever I have” 是关系代词whatever引导的主语从句，原句意思为“我的东西你都可以随时使用“。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1761,7 +1916,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. in that" wrapText="true">
                                                                <HBox.margin>
@@ -1770,21 +1925,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q31" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. for that" toggleGroup="$q31" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. for which" toggleGroup="$q31" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. in which" toggleGroup="$q31" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1798,7 +1965,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp3" prefHeight="80.0" prefWidth="450.0" text="in that…因为，在于……，介词in后面接了宾语从句，原句意思为“液体像固体一样，都有确定的容积。”" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1820,7 +1987,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. what" wrapText="true">
                                                                <HBox.margin>
@@ -1829,21 +1996,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q41" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. when" toggleGroup="$q41" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. which" toggleGroup="$q41" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. such" toggleGroup="$q41" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1857,7 +2036,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp4" prefHeight="80.0" prefWidth="450.0" text="此题为连接代词what引导的主语从句。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1879,7 +2058,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. There is in which" wrapText="true">
                                                                <HBox.margin>
@@ -1888,21 +2067,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q51" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. That’s where" toggleGroup="$q51" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. That’s the building which" toggleGroup="$q51" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. The building is that" toggleGroup="$q51" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1916,7 +2107,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp5" prefHeight="80.0" prefWidth="450.0" text="此题为连接副词where引导的表语从句。原句意思为“那幢建筑物是做什么用的？那是学校储藏器材的地方。”" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1938,7 +2129,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. It says" wrapText="true">
                                                                <HBox.margin>
@@ -1947,21 +2138,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q61" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. It is said" toggleGroup="$q61" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. That is" toggleGroup="$q61" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. He was told" toggleGroup="$q61" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -1975,7 +2178,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp6" prefHeight="80.0" prefWidth="450.0" text="此题为It + be + 过去分词 + 主语从句：It is said (reported, announced, arranged, decided, expected, stressed, etc.) that…。原句意思为“据说今年还会有个好收成。”" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -1997,7 +2200,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="181.0" text="A. because the road was slippery" wrapText="true">
                                                                <HBox.margin>
@@ -2006,21 +2209,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q71" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="161.0" text="B. that the road was slippery" toggleGroup="$q71" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="151.0" text="C. due to slippery road" toggleGroup="$q71" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="165.0" text="D. owing to the slippery road" toggleGroup="$q71" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children>
                                                       </HBox>
@@ -2034,7 +2249,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp7" prefHeight="80.0" prefWidth="450.0" text="此题为The reason is that…表语从句：“The reason why the car was stopped” 是定语从句，主语中有定语从句；”was that the road was slippery“是表语从句。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -2056,7 +2271,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" prefWidth="123.0" text="A. That, that" wrapText="true">
                                                                <HBox.margin>
@@ -2065,21 +2280,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q81" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. What, that" toggleGroup="$q81" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. Which, that" toggleGroup="$q81" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. Which, what" toggleGroup="$q81" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="nonKey8" text="B" textFill="RED">
@@ -2092,7 +2319,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp8" prefHeight="80.0" prefWidth="450.0" text="此题中“What is more surprising”是连接代词what引导的主语从句，作句子主语; “the fact that all of us are correct”是同位语从句，放在be动词“is”后，作句子表语。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -2114,7 +2341,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. whether" wrapText="true">
                                                                <HBox.margin>
@@ -2123,21 +2350,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q91" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. that" toggleGroup="$q91" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. if" toggleGroup="$q91" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. which" toggleGroup="$q91" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="nonKey9" text="A" textFill="RED">
@@ -2150,7 +2389,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp9" prefHeight="80.0" prefWidth="450.0" text="此题中“the belief that the earth moved around the Sun”是同位语从句。同位语从句 引导词that不能省略。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />
@@ -2172,7 +2411,7 @@
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <HBox prefHeight="80.0" prefWidth="500.0">
+                                                      <HBox prefHeight="80.0" prefWidth="300.0">
                                                          <children>
                                                             <JFXRadioButton prefHeight="80.0" text="A. The" wrapText="true">
                                                                <HBox.margin>
@@ -2181,21 +2420,33 @@
                                                                <toggleGroup>
                                                                   <ToggleGroup fx:id="q101" />
                                                                </toggleGroup>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="B. To" toggleGroup="$q101" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="C. What" toggleGroup="$q101" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                             <JFXRadioButton prefHeight="80.0" text="D. That" toggleGroup="$q101" wrapText="true">
                                                                <HBox.margin>
                                                                   <Insets />
                                                                </HBox.margin>
+                                                               <font>
+                                                                  <Font size="10.0" />
+                                                               </font>
                                                             </JFXRadioButton>
                                                          </children></HBox>
                                                       <Label fx:id="nonKey10" text="D" textFill="RED">
@@ -2208,7 +2459,7 @@
                                                       </Label>
                                                       <Label fx:id="nonExp10" prefHeight="80.0" prefWidth="450.0" text="“China is a socialist country”是句子成分完整的陈述句，放在句首做句子主语，前面应用引导词that，that引导主语从句时不能省略。" wrapText="true">
                                                          <font>
-                                                            <Font size="14.0" />
+                                                            <Font size="12.0" />
                                                          </font>
                                                          <HBox.margin>
                                                             <Insets left="10.0" />

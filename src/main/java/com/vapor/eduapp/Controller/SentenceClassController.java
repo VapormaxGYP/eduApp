@@ -49,7 +49,7 @@ public class SentenceClassController implements Initializable {
 
     @FXML
     private VBox menuBox, contentVbox, contentVbox1, contentVbox2, contentVbox3, contentVbox4, contentVbox5,
-                 subjectVbox, objectVbox, predicativeVbox, apposiviteVbox,
+                 subjectVbox, objectVbox, predicativeVbox, apposiviteVbox, showVbox,
                  timeVbox, posVbox, causeVbox, resVbox, aimVbox, ifVbox, concessionVbox, wayVbox, compareVbox;
 
     @FXML
@@ -136,7 +136,7 @@ public class SentenceClassController implements Initializable {
         contentDrawer4.setSidePane(contentVbox4);
         contentDrawer5.setSidePane(contentVbox5);
 
-        showDrawer.setSidePane(showView);
+        showDrawer.setSidePane(showVbox);
         showDrawer.close();
 
         subjectDrawer.setSidePane(subjectVbox);
